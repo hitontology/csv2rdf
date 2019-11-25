@@ -1,0 +1,30 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX {SUB}: <http://www.snik.eu/ontology/{SUB}/>
+PREFIX meta: <http://www.snik.eu/ontology/meta/>                                                                      
+
+CONSTRUCT
+{
+    ?ch a meta:Chapter;
+	meta:book ?book;
+	meta:chapterNumber ?n;
+	meta:firstPage	?f;
+	meta:lastPage	?l;
+	meta:subChapterOf ?super;
+	rdfs:label ?len;
+	rdfs:label ?lde.
+}
+FROM <file:../chapter.csv>
+WHERE
+{
+   BIND (URI('http://www.snik.eu/ontology/{SUB}') AS ?book)
+   BIND (URI(CONCAT(tarql:expandPrefix('{SUB}'),?suffix)) AS ?ch)
+   BIND(xsd:positiveInteger(?first) as ?f)
+   BIND(xsd:positiveInteger(?last) as ?l)
+   BIND(xsd:decimal(?number) as ?n)
+   BIND (IF(?number != '', ?a, ?nothing) AS ?number)
+   BIND (IF(?subChapterOf != '', URI(CONCAT(tarql:expandPrefix('{SUB}'),?subChapterOf)), ?nothing) AS ?super)
+   BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
+   BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
+}

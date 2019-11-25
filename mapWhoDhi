@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+SUBS="ob"
+for s in $SUBS
+do
+ if [ ! -d "${s}" ]
+ then
+  echo "********* ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING SUBONTOLOGY ${s} ********************************"
+  elif [ ! -e "${s}/chapter.csv" ]
+  then
+   echo "********* INPUT FILE ${s}/chapter.csv DOES NOT EXIST, SKIPPING SUBONTOLOGY ${s} *************************"
+   else
+    echo "********* Converting ${s} ******************************************************************************"
+    mkdir -p ${s}/tmp
+    sed "s|{SUB}|${s}|g" chapter.tarql.template > ${s}/tmp/chapter.tarql
+    mkdir -p ${s}/out
+    echo "** Generating main triples ******************************"
+    tarql ${s}/tmp/chapter.tarql | rapper -i turtle - http://www.snik.eu/ontology/${s}/ > ${s}/out/chapter.ttl
+ fi
+done

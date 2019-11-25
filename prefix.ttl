@@ -1,0 +1,15 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix he: <http://www.snik.eu/ontology/he/>.
+@prefix it: <http://www.snik.eu/ontology/it/>.
+@prefix ciox: <http://www.snik.eu/ontology/ciox/>.
+@prefix ob: <http://www.snik.eu/ontology/ob/>.
+@prefix bb: <http://www.snik.eu/ontology/bb/>.
+@prefix it4it: <http://www.snik.eu/ontology/it4it/>.
+@prefix meta: <http://www.snik.eu/ontology/meta/>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix ov: <http://open.vocab.org/terms/>.
