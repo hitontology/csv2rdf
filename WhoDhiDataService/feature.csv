@@ -1,0 +1,6 @@
+n,en,uri,comment,citation
+4.1,"Data collection, management, and use",DataCollectionManagementAndUse,"Digital approaches to data collection, management, analysis, storage. This can include standalone interventions focusing exclusively on data collection and management, as well as data services to support other interventions, such as data visualization within supply chain management.  ",
+4.2,Data coding,DataCoding,"Digital approaches to code data and manage the use of standardized datasets.
+",
+4.3,Location mapping,LocationMapping,The use of geolocation coordinates to map objects and events. ,
+4.4,Data exchange and interoperability    ,DataExchangeAndInteroperability,The capability of two or more systems to communicate and exchange data through specified data formats and communication protocols.,6

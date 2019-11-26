@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-SUBS="WhoDhiClient"
+SUBS="WhoDhiClient WhoDhiDataService"
 TEMPLATES="subfeature feature"
 for s in $SUBS
 do
