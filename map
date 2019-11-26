@@ -1,29 +1,33 @@
 #!/bin/bash
 set -e
 SUBS="WhoDhiClient"
+TEMPLATES="subfeature feature"
 for s in $SUBS
 do
  if [ ! -d "${s}" ]
  then
-  echo "********* ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ********************************"
-  else
-    if [ -e "${s}/subfeature.csv" ]
-    then
-      echo "********* Converting ${s} ******************************************************************************"
-      mkdir -p ${s}/tmp
-      mkdir -p ${s}/out
-      echo "** Generating subfeature triples ******************************"
-      sed "s|{SUB}|${s}|g" subfeature.tarql.template > ${s}/tmp/subfeature.tarql
-      tarql ${s}/tmp/subfeature.tarql | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/tmp/subfeature.ttl
-    else
-      echo "** WARNING: ${s}/subfeature.csv DOES NOT EXIST, SKIPPING SUBFEATURES *******************************"
-    fi
-     
- #   echo "** Merging ***********************************x************"
- #   rapper -i turtle ${s}/ontology.ttl > ${s}/tmp/ontology.nt 
- #   cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://www.snik.eu/ontology/${s}/ > ${s}/out/all.ttl
- #   echo "** Testing ************************************************"
- #   rapper -i turtle -c ${s}/out/all.ttl
- #   echo "********************************************************************************************************"
-  fi
+  echo "** ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ********************************"
+ else
+  echo "** DIRECTORY ${s} ******************************************************************************"
+  for t in $TEMPLATES
+  do
+   csv="${s}/${t}.csv"
+   if [ -e $csv ]
+   then
+    echo "**** Using Template ${t} on ${csv} **************************************************************************"
+    mkdir -p ${s}/tmp
+    mkdir -p ${s}/out
+    sed "s|{SUB}|${s}|g" ${t}.tarql.template > ${s}/tmp/${t}.tarql
+    tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.ttl
+   else
+    echo "**** WARNING: ${csv} DOES NOT EXIST, SKIPPING TEMPLATE ${t} *******************************"
+   fi
+  done 
+   echo "** Merging ***********************************x************"
+   rapper -i turtle ${s}/ontology.ttl > ${s}/tmp/ontology.nt 
+   cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://www.snik.eu/ontology/${s}/ > ${s}/out/all.ttl
+   echo "** Testing ************************************************"
+   rapper -i turtle -c ${s}/out/all.ttl
+   echo "********************************************************************************************************"
+ fi
 done
