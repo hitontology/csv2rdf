@@ -1,0 +1,29 @@
+#!/bin/bash
+set -e
+SUBS="WhoDhiClient"
+for s in $SUBS
+do
+ if [ ! -d "${s}" ]
+ then
+  echo "********* ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ********************************"
+  else
+    if [ -e "${s}/subfeature.csv" ]
+    then
+      echo "********* Converting ${s} ******************************************************************************"
+      mkdir -p ${s}/tmp
+      mkdir -p ${s}/out
+      echo "** Generating subfeature triples ******************************"
+      sed "s|{SUB}|${s}|g" subfeature.tarql.template > ${s}/tmp/subfeature.tarql
+      tarql ${s}/tmp/subfeature.tarql | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/tmp/subfeature.ttl
+    else
+      echo "** WARNING: ${s}/subfeature.csv DOES NOT EXIST, SKIPPING SUBFEATURES *******************************"
+    fi
+     
+ #   echo "** Merging ***********************************x************"
+ #   rapper -i turtle ${s}/ontology.ttl > ${s}/tmp/ontology.nt 
+ #   cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://www.snik.eu/ontology/${s}/ > ${s}/out/all.ttl
+ #   echo "** Testing ************************************************"
+ #   rapper -i turtle -c ${s}/out/all.ttl
+ #   echo "********************************************************************************************************"
+  fi
+done
