@@ -1,5 +1,5 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#asdfdsf/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX hito: <http://hitontology.eu/ontology/>                                                                      
 
@@ -7,7 +7,7 @@ CONSTRUCT
 {
     ?f a hito:FeatureClassified;
 	hito:featureCatalogue ?cat;
-	hito:subFeatureOf ?super;
+	hito:subFeatureOf ?sup;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 }
@@ -15,7 +15,7 @@ FROM <file:../subfeature.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
-   BIND (IF(?subChapterOf != '', URI(CONCAT(tarql:expandPrefix('hito'),?super)), ?nothing) AS ?super)
+   BIND (IF(?super!= '', URI(CONCAT(tarql:expandPrefix('hito'),?super)), ?nothing) AS ?sup)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Catalogue")) AS ?cat)

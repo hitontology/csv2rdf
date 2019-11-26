@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.                                                                     
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix hito: <http://hitontology.eu/ontology/>.
+
+hito:WhoDhiClientCatalogue a hito:FeatureCatalogue;
+	rdfs:comment "Section 1.0 'Client' in the WHO Classification of Digital Health Interventions v1.0"@en;
+	rdfs:rdfs "Clients"@en;
+	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.
+		

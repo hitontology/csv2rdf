@@ -18,16 +18,16 @@ do
     mkdir -p ${s}/tmp
     mkdir -p ${s}/out
     sed "s|{SUB}|${s}|g" ${t}.tarql.template > ${s}/tmp/${t}.tarql
-    tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.ttl
+    tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.nt
    else
     echo "**** WARNING: ${csv} DOES NOT EXIST, SKIPPING TEMPLATE ${t} *******************************"
    fi
   done 
-   echo "** Merging ***********************************x************"
-   rapper -i turtle ${s}/ontology.ttl > ${s}/tmp/ontology.nt 
-   cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://www.snik.eu/ontology/${s}/ > ${s}/out/all.ttl
-   echo "** Testing ************************************************"
-   rapper -i turtle -c ${s}/out/all.ttl
-   echo "********************************************************************************************************"
+  echo "** Merging ***********************************x************"
+  rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
+  cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
+  echo "** Testing ************************************************"
+  rapper -i turtle -c ${s}/out/all.ttl
+  echo "********************************************************************************************************"
  fi
 done
