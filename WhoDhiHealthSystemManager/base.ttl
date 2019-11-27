@@ -1,10 +1,15 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.                                                                     
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix hito: <http://hitontology.eu/ontology/>.
 
-hito:WhoDhiHealthSystemManager a hito:FunctionCatalogue;
-	rdfs:comment "Section 3.0 'Health System Managers' in the WHO Classification of Digital Health Interventions v1.0"@en;
-	rdfs:rdfs "Health System Managers"@en;
+hito:WhoDhi1-0 rdfs:member hito:WhoDhiHealthSystemManagerFunctionCatalogue, hito:WhoDhiHealthSystemManagerFeatureCatalogue.
+hito:WhoDhiHealthSystemManagerFunctionCatalogue a hito:FunctionCatalogue;
+	rdfs:comment "Function catalogue defined in section 3.0 'Health System Managers' in the WHO Classification of Digital Health Interventions v1.0"@en;
+	rdfs:label "Health System Managers Function Catalogue"@en;
 	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.
-		
+
+hito:WhoDhiHealthSystemManagerFeatureCatalogue a hito:FeatureCatalogue;
+	rdfs:comment "Feature catalogue defined in section 3.0 'Health System Managers' in the WHO Classification of Digital Health Interventions v1.0"@en;
+	rdfs:label "Health System Managers Feature Catalogue"@en;
+	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.
