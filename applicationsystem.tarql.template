@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hito: <http://hitontology.eu/ontology/>                                                                      
+
+CONSTRUCT
+{
+    ?f a hito:ApplicationSystemClassified;
+	hito:applicationSystemCatalogueCatalogue ?cat;
+	rdfs:comment ?co;
+	rdfs:label ?len;
+	rdfs:label ?lde.
+}
+FROM <file:../applicationsystem.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
+   BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
+   BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}ApplicationSystemCatalogue")) AS ?cat)
+}
+

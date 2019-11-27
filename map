@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
-SUBS="WhoDhiClient WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiDataService"
-TEMPLATES="subfeature feature function"
+SUBS="WhoDhiClient WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiDataService WhoDhiSystemCategory"
+TEMPLATES="subfeature feature function applicationsystem"
+rm -f /tmp/combined.nt
 for s in $SUBS
 do
  if [ ! -d "${s}" ]
@@ -26,8 +27,12 @@ do
   echo "** Merging ***********************************x************"
   rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
   cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
+  rapper -i turtle -o ntriples ${s}/out/all.ttl >> /tmp/combined.nt
   echo "** Testing ************************************************"
   rapper -i turtle -c ${s}/out/all.ttl
   echo "********************************************************************************************************"
  fi
 done
+echo "********************* test combination ******************"
+rapper -i turtle -c /tmp/combined.nt
+cat prefix.ttl /tmp/combined.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > /tmp/combined.ttl
