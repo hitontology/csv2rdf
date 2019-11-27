@@ -7,5 +7,5 @@ hito:WhoDhi1-0 rdfs:member hito:WhoDhiDataServiceFeatureCatalogue.
 
 hito:WhoDhiDataServiceFeatureCatalogue a hito:FeatureCatalogue;
 	rdfs:comment "Section 4.0 'Data Service' in the WHO Classification of Digital Health Interventions v1.0"@en;
-	rdfs:label "Clients"@en;
+	rdfs:label "Data Service Feature Catalogue"@en;
 	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.
