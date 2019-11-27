@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-SUBS="WhoDhiClient WhoDhiDataService"
-TEMPLATES="subfeature feature"
+SUBS="WhoDhiClient WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiDataService"
+TEMPLATES="subfeature feature function"
 for s in $SUBS
 do
  if [ ! -d "${s}" ]

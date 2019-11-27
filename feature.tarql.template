@@ -18,6 +18,6 @@ WHERE
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Catalogue")) AS ?cat)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FeatureCatalogue")) AS ?cat)
 }
 

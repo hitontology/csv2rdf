@@ -1,0 +1,11 @@
+n,en,uri,comment,citation
+2.1,Client identification and registration,ClientIdentificationAndRegistration,Client identity verification and enrollment into health services.,
+2.2,Client health records,ClientHealthRecords,Digitized job aids that combine an individual’s health information with the health-care provider’s knowledge and clinical protocols in order to assist health-care providers in making diagnosis and treatment decisions. ,
+2.3,Healthcare provider decision support,HealthcareProviderDecisionSupport,"Digitized record used to capture, store, access and share health information on a client or grouping of clients.   ",
+2.4,Telemedicine,Telemedicine,"Provision of health-care services at a distance. The delivery of health care services, where patients and providers are separated by distance.    ",
+2.5,Healthcare provider communication,HealthcareProviderCommunication,"Communication and transmission of information among healthcare providers, supervisors, and health system managers.  Healthcare provider communication.  ",
+2.6,Referral coordination,ReferralCoordination,"Digital approaches to support communication and coordination mechanisms to facilitate referrals, both within the health sector and to other health-related sectors.",
+2.7,Health worker activity planning and scheduling,HealthWorkerActivityPlanningAndScheduling,Automated scheduling and planning tools to assist in prioritizing provider followup. Digital work planning and scheduling tools can take the form of reminders to healthcare providers on upcoming/overdue services and other mechanisms to flag clients that need to be prioritized for service delivery. ,
+2.8,Healthcare provider training,HealthcareProviderTraining,"The management and provision of education and training content in electronic form for health professionals. In contrast to decision support, healthcare provider training does not need to be used at the point of care. ",
+2.9,Prescription and medication management,PrescriptionAndMedicationManagement,"Digital approaches to facilitate the management of prescriptions, including tracking prescription orders and monitoring physical consumption of medication.",2
+2.10,Laboratory and Diagnostics Imaging Manangement,LaboratoryAndDiagnosticsImagingManangement,Digital approaches to manage and exchange laboratory and diagnostic orders and results.,

@@ -7,18 +7,20 @@ CONSTRUCT
 {
     ?f a hito:FeatureClassified;
 	hito:featureCatalogue ?cat;
-	hito:subFeatureOf ?sup;
 	rdfs:label ?len;
 	rdfs:label ?lde.
+
+    ?sup ?suprel ?f.
 }
 FROM <file:../subfeature.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
    BIND (IF(?super!= '', URI(CONCAT(tarql:expandPrefix('hito'),?super)), ?nothing) AS ?sup)
+   BIND (IF(BOUND(?supertype)&&(?supertype="FunctionClassified"), hito:supports, hito:featureComponent) AS ?suprel)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Catalogue")) AS ?cat)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FeatureCatalogue")) AS ?cat)
 }
 
 CONSTRUCT
