@@ -8,6 +8,7 @@ CONSTRUCT
     ?f a hito:EnterpriseFunctionClassified;
 	hito:functionCatalogue ?cat;
 	rdfs:comment ?co;
+	hito:memberNr ?num;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 }
@@ -19,5 +20,6 @@ WHERE
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FunctionCatalogue")) AS ?cat)
+   BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
 }
 

@@ -1,26 +1,26 @@
-uri,en
-CensusPopulationInformationDataWarehouse,"Census, population information & data warehouse"
-CivilRegistrationAndVitalStatistics,Civil registration and vital statistics
-ClientApplications,Client applications
-ClientCommunicationSystem,Client communication system
-ClinicalTerminologyAndClassifications,Clinical terminology and classifications
-CommunitybasedInformationSystem,Community-based information system
-DataInterchangeInteroperabilityAndAccessibility,Data interchange interoperability and accessibility
-ElectronicMedicalRecord,Electronic medical record
-EmergencyResponseSystem,Emergency response system
-EnvironmentalMonitoringSystem,Environmental monitoring system
-FacilityManagementInformationSystem,Facility management information system
-GeographicInformationSystemGis,Geographic information system (GIS)
-HealthFinanceAndInsuranceInformationSystem,Health finance and insurance information system
-HealthManagementInformationSystemHmis,Health management information system (HMIS)
-HumanResourceInformationSystem,Human resource information system
-IdentificationRegistriesAndDirectories,Identification registries and directories
-KnowledgeManagementSystem,Knowledge management system
-LaboratoryAndDiagnosticsInformationSystem,Laboratory and diagnostics information system
-LearningAndTrainingSystem,Learning and training system
-LogisticsManagementInformationSystemLmis,Logistics management information system (LMIS)
-PharmacyInformationSystem,Pharmacy information system
-PublicHealthAndDiseaseSurveillanceSystem,Public health and disease surveillance system
-ResearchInformationSystem,Research information system
-SharedHealthRecordAndHealthInformationRespositories,Shared Health Record and health information respositories
-Telemedicine,Telemedicine
+n,uri,en
+1,CensusPopulationInformationDataWarehouse,"Census, population information & data warehouse"
+2,CivilRegistrationAndVitalStatistics,Civil registration and vital statistics
+3,ClientApplications,Client applications
+4,ClientCommunicationSystem,Client communication system
+5,ClinicalTerminologyAndClassifications,Clinical terminology and classifications
+6,CommunitybasedInformationSystem,Community-based information system
+7,DataInterchangeInteroperabilityAndAccessibility,Data interchange interoperability and accessibility
+8,ElectronicMedicalRecord,Electronic medical record
+9,EmergencyResponseSystem,Emergency response system
+10,EnvironmentalMonitoringSystem,Environmental monitoring system
+11,FacilityManagementInformationSystem,Facility management information system
+12,GeographicInformationSystemGis,Geographic information system (GIS)
+13,HealthFinanceAndInsuranceInformationSystem,Health finance and insurance information system
+14,HealthManagementInformationSystemHmis,Health management information system (HMIS)
+15,HumanResourceInformationSystem,Human resource information system
+16,IdentificationRegistriesAndDirectories,Identification registries and directories
+17,KnowledgeManagementSystem,Knowledge management system
+18,LaboratoryAndDiagnosticsInformationSystem,Laboratory and diagnostics information system
+19,LearningAndTrainingSystem,Learning and training system
+20,LogisticsManagementInformationSystemLmis,Logistics management information system (LMIS)
+21,PharmacyInformationSystem,Pharmacy information system
+22,PublicHealthAndDiseaseSurveillanceSystem,Public health and disease surveillance system
+23,ResearchInformationSystem,Research information system
+24,SharedHealthRecordAndHealthInformationRespositories,Shared Health Record and health information respositories
+25,Telemedicine,Telemedicine
