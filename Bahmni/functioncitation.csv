@@ -1,0 +1,8 @@
+n,en,uri,whodhin,whodhiuri,citation
+1,Patient Registration,PatientRegistration,2.1,ClientIdentificationAndRegistration,
+2,Clinical Services,ClinicalServices,"2.2,2.5,2.7,2.8,2.9","ClientHealthRecords,HealthcareProviderCommunication,HealthWorkerActivityPlanningAndScheduling,HealthcareProviderTraining,PrescriptionAndMedicationManagement",
+3,Laboratory,Laboratory,2.1,ClientIdentificationAndRegistration,
+4,Inpatient Management,InpatientManagement,"2.1,2.2","ClientIdentificationAndRegistration,ClientHealthRecords",
+5,Stock Management,StockManagement,3.2,SupplyChainManagement,
+6,Billing,Billing,3.5,HealthFinancing,
+7,Reporting,Reporting,,,

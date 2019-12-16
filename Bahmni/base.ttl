@@ -1,0 +1,39 @@
+@prefix : <http://hitontology.eu/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbr: <http://dbpedia.org/resource/>.
+
+:Bahmni a :SoftwareProduct;
+	rdfs:label "Bahmni";
+	:supportsLanguage dbr:English_language;
+	:supportsClient :WebBased;
+	:runsOnOs dbr:CentOS;
+	:programmingLanguage <http://dbpedia.org/resource/Java_(programming_language)>;
+	:homepage <https://www.bahmni.org/>;
+	:usesDbs :MySql,:PostgreSql;
+	:usedInOrganizationalUnit :BahmniEmergency, :BahmniSurgery, :BahmniIntakeOutput, :BahmniGynaecology;
+	:license dbr:Affero_General_Public_License.
+
+:BahmniEmergency a :OrganizationalUnitCitation;
+	rdfs:label "emergency"@en;
+	:classifiedUnitSMOMEDCT :Accident_and_Emergency_department_environment.
+
+:BahmniSurgery a :OrganizationalUnitCitation;
+	rdfs:label "surgery"@en;
+	:classifiedUnitSMOMEDCT :Surgical_department_environment.
+
+:BahmniIntakeOutput a :OrganizationalUnitCitation;
+	rdfs:label "intake-output"@en.
+
+:BahmniGynaecology a :OrganizationalUnitCitation;
+	rdfs:label "gynaecology"@en;
+	:classifiedUnitSMOMEDCT :Gynecology_department_environment.
+
+:DigitalOcean a :CloudPlatform;
+	rdfs:label "Digital Ocean"@en.
+
+:MySql a :DatabaseSystem;
+	rdfs:label "MySQL"@en.
+
+:PostgreSql a :DatabaseSystem;
+	rdfs:label "PostgreSQL"@en.
+

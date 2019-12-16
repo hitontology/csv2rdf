@@ -1,0 +1,35 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hito: <http://hitontology.eu/ontology/>                                                                      
+
+CONSTRUCT
+{
+    ?f a hito:FeatureCitation;
+	rdfs:comment ?co;
+	rdfs:label ?len;
+	rdfs:label ?lde.
+
+    ?product hito:offersFeature ?f.
+}
+FROM <file:../featurecitation.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
+   BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
+   BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}")) AS ?product)
+}
+
+CONSTRUCT
+{
+    ?f hito:featureClassified ?w.
+}
+FROM <file:../featurecitation.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?who)) AS ?who)
+   ?who apf:strSplit (?whodhiuri",")
+}
+
