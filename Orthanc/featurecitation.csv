@@ -1,0 +1,8 @@
+en,uri,whodhin,whodhiuri
+DICOM identifiers,DicomIdentifiers,,
+DICOM network protocol,DicomNetworkProtocol,,
+Test the connection,TestConnection,,
+Send images,SendImages,2.10.3,CaptureFromDigitalDevices
+Search the content,SearchContent,,
+Retrieve images,RetrieveImages,,
+
