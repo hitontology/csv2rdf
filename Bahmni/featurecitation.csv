@@ -1,4 +1,4 @@
-n,en,uri,function,whodhin,whodhiuri,,citation,
+n,en,uri,functioncitation,whodhin,whodhiuri,,citation,
 1.1,Search Patients,SearchPatients,PatientRegistration,,,,,
 1.2,Print Patient Id,PrintPatientId,PatientRegistration,2.1.1,VerifyClientUniqueIdentity,,,
 2.1,Capture Clinical Records,CaptureClinicalRecords,ClinicalServices,,,,,#N/A
