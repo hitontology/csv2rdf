@@ -1,0 +1,14 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix hito: <http://hitontology.eu/ontology/>.
+
+hito:Bb rdfs:member hito:BbOperationManagementSystemFunctionCatalogue, hito:BbOperationManagementSystemFeatureCatalogue.
+
+hito:BbOperationManagementSystemFunctionCatalogue a hito:FunctionCatalogue;
+	rdfs:comment "Function catalogue defined in table 6.7 on page 123 in the Blue Book version edition 2"@en;
+	rdfs:label "Blue Book Operation Management System Function Catalogue"@en.
+
+hito:BbOperationManagementSystemFeatureCatalogue a hito:FeatureCatalogue;
+	rdfs:comment "Feature catalogue defined in table 6.7 on page 123 in the Blue Book version edition 2"@en;
+	rdfs:label "Blue Book Operation Management System Feature Catalogue"@en.
