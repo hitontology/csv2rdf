@@ -5,7 +5,7 @@
 
 hito:Bb rdfs:member hito:BbReferenceModelFunctionCatalogue.
 
-hito:BbReferenceModelFunctionCatalogue a hito:FunctionCatalogue;
+hito:BbReferenceModelFunctionCatalogue a hito:EnterpriseFunctionCatalogue;
         rdfs:comment "Blue Book Reference Model of the Domain Layer of Hospital Information Systems"@en;
         rdfs:label "Blue Book Reference Model Function Catalogue"@en.
 
