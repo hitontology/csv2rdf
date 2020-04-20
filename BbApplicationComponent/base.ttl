@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix hito: <http://hitontology.eu/ontology/>.
+
+hito:Bb rdfs:member hito:BbApplicationComponentApplicationSystemCatalogue.
+
+hito:BbApplicationComponentApplicationSystemCatalogue a hito:ApplicationSystemCatalogue;
+        rdfs:comment "Application Components from the Blue Book as Application Systems"@en;
+        rdfs:label "Blue Book Application Components"@en.
+

@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e
-SUBS="WhoDhiClient WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiDataService WhoDhiSystemCategory"
-TEMPLATES="subfeature feature function applicationsystem"
+#SUBS="BbReferenceModel"
+SUBS="BbOperationManagementSystem BbReferenceModel BbApplicationComponent"
+#SUBS="WhoDhiClient WhoDhiHealthSystemManager WhoDhiDataService WhoDhiSystemCategory WhoDhiHealthcareProvider"
+
+TEMPLATES="subfeature feature function applicationsystem featurecitation functioncitation"
 rm -f /tmp/combined.nt
 for s in $SUBS
 do
@@ -34,5 +37,7 @@ do
  fi
 done
 echo "********************* test combination ******************"
+sort /tmp/combined.nt -o /tmp/combined.nt
 rapper -i turtle -c /tmp/combined.nt
 cat prefix.ttl /tmp/combined.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > /tmp/combined.ttl
+echo "/tmp/combined.ttl"

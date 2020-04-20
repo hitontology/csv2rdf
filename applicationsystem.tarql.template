@@ -6,7 +6,7 @@ PREFIX hito: <http://hitontology.eu/ontology/>
 CONSTRUCT
 {
     ?f a hito:ApplicationSystemClassified;
-	hito:applicationSystemCatalogueCatalogue ?cat;
+	hito:applicationSystemCatalogue ?cat;
 	rdfs:comment ?co;
 	hito:memberNr ?num;
 	rdfs:label ?len;
@@ -21,5 +21,17 @@ WHERE
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}ApplicationSystemCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
+}
+
+CONSTRUCT
+{
+    ?f skos:altLabel ?synonymen.
+}
+FROM <file:../applicationsystem.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   ?synonym apf:strSplit (?synonyms ";")
+   BIND (STRLANG(?synonym,"en") AS ?synonymen)
 }
 
