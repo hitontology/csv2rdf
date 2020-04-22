@@ -1,3 +1,4 @@
+# reads list of SNIK bb class suffixes from stdin and outputs those that don't exist
 import requests
 from sys import stdin
 
