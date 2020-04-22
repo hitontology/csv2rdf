@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
-#SUBS="BbReferenceModel"
-SUBS="BbOperationManagementSystem BbReferenceModel BbApplicationComponent"
+SUBS="BbArchitecture BbReferenceModel"
 #SUBS="WhoDhiClient WhoDhiHealthSystemManager WhoDhiDataService WhoDhiSystemCategory WhoDhiHealthcareProvider"
 
 TEMPLATES="subfeature feature function applicationsystem featurecitation functioncitation"
