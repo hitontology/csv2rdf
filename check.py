@@ -1,0 +1,41 @@
+import requests
+
+uris = ["ScheduleAndResourceAllocation",
+"PatientIdentificationAndCheckingForRecurrent",
+"AdministrativeAdmission",
+"VisitorAndInformationService",
+"CodingOfDiagnosesAndProcedures",
+"AdministrativeDischargeAndBilling",
+"MedicalAdmission",
+"DecisionMakingAndPlanningOfPatientTreatment",
+"ExecutionOfDiagnosticTherapeuticAndNursingProcedures",
+"PatientDischargeAndTransferToOtherInstitutions",
+"HumanResourcesManagement",
+"NursingAdmission",
+"MedicalAndNursingCarePlanning",
+"ExecutionOfNursingProcedures",
+"NursingDischargeAndNursingReportWriting",
+"SchedulingAndResourceAllocation",
+"ExecutionOfDiagnosticTherapeuticAndNursingProcedures",
+"OrderEntry",
+"SupplyAndDisposalManagementSchedulingAndResourceAllocation",
+"DecisionMakingAndPatientInformation",
+"ExecutionOfOperations",
+"SupplyAndDisposalManagementSchedulingAndResourceAllocation",
+"WorkSchedulingAndTimeManagement",
+"ExecutionOfRadiologicalExaminations",
+"AppointmentScheduling",
+"ManagementOfMedicalDevices",
+"ExecutionOfLabExaminations",
+"Controlling",
+"FinancialAccounting",
+"FacilityManagement",
+"QualityManagement",
+"SupplyAndDisposalManagement",
+"HospitalManagement",
+"ExecutionOfClinicalTrialsAndExperiments",
+"ArchivingOfPatientInformation"]
+
+for u in uris:
+    if (requests.get("https://www.snik.eu/sparql?default-graph-uri=&query=ASK+%7Bbb%3A"+u+"+%3Fp+%3Fo.%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on").json() == False):
+        print(u)
