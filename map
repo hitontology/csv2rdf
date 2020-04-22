@@ -12,13 +12,15 @@ do
   echo "** ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ********************************"
  else
   echo "** DIRECTORY ${s} ******************************************************************************"
+  mkdir -p ${s}/tmp
+  mkdir -p ${s}/tmp/old
+  mv ${s}/tmp/*.nt ${s}/tmp/old
   for t in $TEMPLATES
   do
    csv="${s}/${t}.csv"
    if [ -e $csv ]
    then
     echo "**** Using Template ${t} on ${csv} **************************************************************************"
-    mkdir -p ${s}/tmp
     mkdir -p ${s}/out
     sed "s|{SUB}|${s}|g" ${t}.tarql.template > ${s}/tmp/${t}.tarql
     tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.nt

@@ -2,6 +2,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX hito: <http://hitontology.eu/ontology/>                                                                      
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX bb: <http://www.snik.eu/ontology/bb/>
 
 CONSTRUCT
 {
@@ -9,6 +12,7 @@ CONSTRUCT
 	hito:featureCatalogue ?cat;
         ?suprel ?sup;
 	hito:memberNr ?num;
+	dcterms:source ?dcts;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 }
@@ -22,6 +26,7 @@ WHERE
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FeatureCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
+   BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dcts)
 }
 
 CONSTRUCT
