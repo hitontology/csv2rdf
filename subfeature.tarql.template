@@ -10,7 +10,6 @@ CONSTRUCT
 {
     ?f a hito:FeatureClassified;
 	hito:featureCatalogue ?cat;
-        ?suprel ?sup;
 	hito:memberNr ?num;
 	dcterms:source ?dcts;
 	rdfs:label ?len;
@@ -20,13 +19,26 @@ FROM <file:../subfeature.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
-   BIND (IF(?super!= '', URI(CONCAT(tarql:expandPrefix('hito'),?super)), ?nothing) AS ?sup)
-   BIND (IF(BOUND(?supertype)&&(?supertype="EnterpriseFunctionClassified"), hito:supports, hito:subfeatureOf) AS ?suprel)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FeatureCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
    BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dcts)
+}
+
+CONSTRUCT
+{
+    ?f ?suprel ?sup.
+}
+FROM <file:../subfeature.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   
+   BIND (IF(BOUND(?supertype)&&(?supertype="EnterpriseFunctionClassified"), hito:supports, hito:subfeatureOf) AS ?suprel)
+   
+   ?supe apf:strSplit (?super ";")
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?supe)) AS ?sup)
 }
 
 CONSTRUCT
@@ -37,6 +49,7 @@ FROM <file:../subfeature.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+
    ?synonym apf:strSplit (?synonyms ";")
    BIND (STRLANG(?synonym,"en") AS ?synonymen)
 }
