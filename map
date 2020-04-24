@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e
-SUBS="BbArchitecture BbReferenceModel"
+#SUBS="BbArchitecture BbReferenceModel"
+SUBS="Standard"
 #SUBS="WhoDhiClient WhoDhiHealthSystemManager WhoDhiDataService WhoDhiSystemCategory WhoDhiHealthcareProvider"
 
-TEMPLATES="subfeature feature function applicationsystem featurecitation functioncitation"
+#TEMPLATES="subfeature feature function applicationsystem featurecitation functioncitation"
+TEMPLATES="standard"
 rm -f /tmp/combined.nt
 for s in $SUBS
 do
@@ -14,7 +16,7 @@ do
   echo "** DIRECTORY ${s} ******************************************************************************"
   mkdir -p ${s}/tmp
   mkdir -p ${s}/tmp/old
-  mv ${s}/tmp/*.nt ${s}/tmp/old
+  mv ${s}/tmp/*.nt ${s}/tmp/old || true
   for t in $TEMPLATES
   do
    csv="${s}/${t}.csv"

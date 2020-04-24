@@ -1,0 +1,42 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hito: <http://hitontology.eu/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX bb: <http://www.snik.eu/ontology/bb/>
+
+CONSTRUCT
+{
+    ?s a hito:Interoperability;
+	rdfs:comment ?co;
+	hito:memberNr ?num;
+	dcterms:source ?dbpediaUri;
+	rdfs:label ?len;
+	rdfs:label ?lde.
+}
+FROM <file:../standard.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?s)
+   BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
+   BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
+   BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FunctionCatalogue")) AS ?cat)
+   BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
+   #BIND (IF(BOUND(?dbpedia)&&(?dbpedia != ''), URI(tarql:expandPrefixedName(?dbpedia)), ?nothing) AS ?dbpediaUri)
+   BIND(URI(?dbpedia) AS ?dbpediaUri)
+}
+
+CONSTRUCT
+{
+    ?f dcterms:source ?source.
+}
+FROM <file:../standard.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   ?dct apf:strSplit (?dctsource ";")
+   BIND (URI(?dct) AS ?source)
+}
+
