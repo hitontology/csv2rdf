@@ -9,7 +9,7 @@ CONSTRUCT
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:offersFeature ?f.
+    ?product hito:feature ?f.
 
     ?fc hito:supportedByFeatureCitation ?f.
 }
