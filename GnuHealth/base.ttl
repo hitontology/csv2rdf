@@ -6,7 +6,7 @@
 	rdfs:label "GNU Health";
 	:language dbr:English_language;
 	:client :WebBased, :Native, :Mobile;
-	:runsOnOs dbr:Linux;
+	:operatingSystem dbr:Linux;
 	:programmingLanguage <http://dbpedia.org/resource/Python_(programming_language)>;
 	:homepage <https://www.gnuhealth.org/>;
 	:usesStandard :Hl7, :Icd10;

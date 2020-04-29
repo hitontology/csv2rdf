@@ -6,7 +6,7 @@
 	rdfs:label "Bahmni";
 	:language dbr:English_language;
 	:client :WebBased;
-	:runsOnOs dbr:CentOS;
+	:operatingSystem dbr:CentOS;
 	:programmingLanguage <http://dbpedia.org/resource/Java_(programming_language)>;
 	:homepage <https://www.bahmni.org/>;
 	:databaseSystem :MySql,:PostgreSql;
