@@ -23,7 +23,7 @@ WHERE
 
 CONSTRUCT
 {
-    ?f hito:functionClassified ?w.
+    ?f hito:enterpriseFunctionClassified ?w.
 }
 FROM <file:../functioncitation.csv>
 WHERE
