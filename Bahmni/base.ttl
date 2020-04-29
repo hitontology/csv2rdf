@@ -4,7 +4,7 @@
 
 :Bahmni a :SoftwareProduct;
 	rdfs:label "Bahmni";
-	:supportsLanguage dbr:English_language;
+	:language dbr:English_language;
 	:supportsClient :WebBased;
 	:runsOnOs dbr:CentOS;
 	:programmingLanguage <http://dbpedia.org/resource/Java_(programming_language)>;

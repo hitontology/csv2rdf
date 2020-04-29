@@ -4,7 +4,7 @@
 
 :GnuHealth a :SoftwareProduct;
 	rdfs:label "GNU Health";
-	:supportsLanguage dbr:English_language;
+	:language dbr:English_language;
 	:supportsClient :WebBased, :Native, :Mobile;
 	:runsOnOs dbr:Linux;
 	:programmingLanguage <http://dbpedia.org/resource/Python_(programming_language)>;
