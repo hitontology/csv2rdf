@@ -11,6 +11,6 @@
 	:programmingLanguage <http://dbpedia.org/resource/C++>;
 	:homepage <https://www.orthanc-server.com/>;
 	:usesStandard :Dicom, :Rest;
-	:usesDbs :PostgreSql;
+	:databaseSystem :PostgreSql;
 	:license dbr:GNU_Free_Documentation_License.
 

@@ -9,7 +9,7 @@
 	:runsOnOs dbr:CentOS;
 	:programmingLanguage <http://dbpedia.org/resource/Java_(programming_language)>;
 	:homepage <https://www.bahmni.org/>;
-	:usesDbs :MySql,:PostgreSql;
+	:databaseSystem :MySql,:PostgreSql;
 	:usedInOrganizationalUnit :BahmniEmergency, :BahmniSurgery, :BahmniIntakeOutput, :BahmniGynaecology;
 	:license dbr:Affero_General_Public_License.
 

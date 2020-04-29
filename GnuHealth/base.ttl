@@ -10,6 +10,6 @@
 	:programmingLanguage <http://dbpedia.org/resource/Python_(programming_language)>;
 	:homepage <https://www.gnuhealth.org/>;
 	:usesStandard :Hl7, :Icd10;
-	:usesDbs :PostgreSql;
+	:databaseSystem :PostgreSql;
 	:license dbr:GNU_General_Public_License.
 
