@@ -6,7 +6,7 @@
 	rdfs:label "Orthanc";
 	rdfs:comment "The enterprise function citations are based on the medfloss website.";
 	:language dbr:English_language;
-	:supportsClient :WebBased;
+	:client :WebBased;
 	:runsOnOs dbr:Linux, dbr:Unix, dbr:Mac_OS, dbr:Microsoft_Windows; # Windows doesn't have the operating system type in DBpedia but I think that is an error
 	:programmingLanguage <http://dbpedia.org/resource/C++>;
 	:homepage <https://www.orthanc-server.com/>;
