@@ -9,7 +9,7 @@ CONSTRUCT
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:supportsEnterpriseFunctionCitation ?f.
+    ?product hito:enterpriseFunction ?f.
 }
 FROM <file:../functioncitation.csv>
 WHERE
