@@ -4,7 +4,7 @@
 @prefix hito: <http://hitontology.eu/ontology/>.
 
 hito:WhoDhi1-0 rdfs:member hito:WhoDhiHealthSystemManagerFunctionCatalogue, hito:WhoDhiHealthSystemManagerFeatureCatalogue.
-hito:WhoDhiHealthSystemManagerFunctionCatalogue a hito:FunctionCatalogue;
+hito:WhoDhiHealthSystemManagerFunctionCatalogue a hito:EnterpriseFunctionCatalogue;
 	rdfs:comment "Function catalogue defined in section 3.0 'Health System Managers' in the WHO Classification of Digital Health Interventions v1.0"@en;
 	rdfs:label "Health System Managers Function Catalogue"@en;
 	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.

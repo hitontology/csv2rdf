@@ -5,7 +5,7 @@
 
 hito:WhoDhi1-0 rdfs:member hito:WhoDhiHealthcareProviderFunctionCatalogue, hito:WhoDhiHealthcareProviderFeatureCatalogue.
 
-hito:WhoDhiHealthcareProviderFunctionCatalogue a hito:FunctionCatalogue;
+hito:WhoDhiHealthcareProviderFunctionCatalogue a hito:EnterpriseFunctionCatalogue;
 	rdfs:comment "Function Catalogue defined in section 2.0 'Healthcare Providers' in the WHO Classification of Digital Health Interventions v1.0"@en;
 	rdfs:label "Healthcare Provider Function Catalogue"@en;
 	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.
