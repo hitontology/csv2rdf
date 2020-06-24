@@ -1,0 +1,5 @@
+label,comment,repository,programmingLibrary,homepage,language,client,databaseSystem,interoperability,programmingLanguage,operatingSystem,license
+GNU Health,,,,https://www.gnuhealth.org/#/download/projects,English_language,WebBased,PostgreSql,HL7,http://dbpedia.org/resource/Python_(programming_language),Debian,GNU_General_Public_License
+,,,,,,Native,,Icd10,,FreeBSD,
+,,,,,,Mobile,,HL7_FHIR,,Linux,
+,,,,,,,,,,Ubuntu_(operating_system),
