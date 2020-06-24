@@ -1,0 +1,55 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hito: <http://hitontology.eu/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX bb: <http://www.snik.eu/ontology/bb/>
+
+CONSTRUCT
+{
+  ?product a hito:SoftwareProduct;
+  rdfs:label ?label;
+	rdfs:comment ?comment;
+  dcterms:source ?dctsource;
+  hito:repository ?repository;
+  hito:programmingLibrary ?programmingLibrary;
+  hito:homepage ?homepage;
+  hito:language ?language;
+  hito:client ?client;
+  hito:databaseSystem ?databaseSystem;
+  hito:interoperability ?interoperability;
+  hito:programmingLanguage ?programmingLanguage;
+  hito:operatingSystem ?operatingSystem;
+  hito:license ?license;
+	rdfs:label ?lde.
+
+}
+FROM <file:../base.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}")) AS ?product)
+
+   # Datatype Properties
+   BIND (IF(BOUND(?label)&&(?label != ''), STRLLANG("?label","en")), ?nothing) AS ?label)
+   BIND (IF(BOUND(?comment)&&(?comment != ''), STRLLANG("?comment","en")), ?nothing) AS ?comment)
+
+   # rdfs:Resource, any URL, no specific prefix
+   BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dctsource)
+   BIND (IF(BOUND(?repository)&&(?repository != ''), URI(tarql:expandPrefixedName(?repository)), ?nothing) AS ?repository)
+   BIND (IF(BOUND(?homepage)&&(?homepage != ''), URI(tarql:expandPrefixedName(?homepage)), ?nothing) AS ?homepage)
+
+   # DBpedia resource namespace
+   BIND (IF(BOUND(?language)&&(?language != ''), URI(CONCAT(tarql:expandPrefix('hito'),?language)), ?nothing) AS ?language)
+   BIND (IF(BOUND(?programmingLanguage)&&(?programmingLanguage != ''), URI(CONCAT(tarql:expandPrefix('hito'),?programmingLanguage)), ?nothing) AS ?programmingLanguage)
+   BIND (IF(BOUND(?operatingSystem)&&(?operatingSystem != ''), URI(CONCAT(tarql:expandPrefix('hito'),?operatingSystem)), ?nothing) AS ?operatingSystem)
+
+   # HITO namespace
+   BIND (IF(BOUND(?client)&&(?client != ''), URI(CONCAT(tarql:expandPrefix('hito'),?client)), ?nothing) AS ?client)
+   BIND (IF(BOUND(?databaseSystem)&&(?databaseSystem != ''), URI(CONCAT(tarql:expandPrefix('hito'),?databaseSystem)), ?nothing) AS ?databaseSystem)
+   BIND (IF(BOUND(?interoperability)&&(?interoperability != ''), URI(CONCAT(tarql:expandPrefix('hito'),?interoperability)), ?nothing) AS ?interoperability)
+   BIND (IF(BOUND(?license)&&(?license != ''), URI(CONCAT(tarql:expandPrefix('hito'),?license)), ?nothing) AS ?license)
+
+   # programming library not specified yet
+   BIND (IF(BOUND(?programmingLibrary)&&(?programmingLibrary != ''), URI(CONCAT(tarql:expandPrefix('hito'),?programmingLibrary)), ?nothing) AS ?programmingLibrary)
+}
