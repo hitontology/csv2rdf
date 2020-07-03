@@ -1,0 +1,8 @@
+@prefix : <http://hitontology.eu/ontology/> .
+
+:Orthanc
+	:directFeature :CaptureFromDigitalDevices;
+	:directEnterpriseFunction
+		:ResearchAndEducation,
+		:ExecutionOfDiagnosticAndTherapeuticProcedures,
+		:LaboratoryAndDiagnosticsImagingManagement.
