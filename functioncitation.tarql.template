@@ -29,7 +29,7 @@ FROM <file:../functioncitation.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
-   ?who apf:strSplit (?whodhiuri ",")
+   ?who apf:strSplit (?whodhiuri ";")
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?who)) AS ?w)
 }
 

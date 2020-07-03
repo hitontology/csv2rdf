@@ -2,6 +2,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX hito: <http://hitontology.eu/ontology/>                                                                      
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
 CONSTRUCT
 {
@@ -9,6 +11,7 @@ CONSTRUCT
 	hito:applicationSystemCatalogue ?cat;
 	rdfs:comment ?co;
 	hito:memberNr ?num;
+	dcterms:source ?dcts;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 }
@@ -21,6 +24,7 @@ WHERE
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}ApplicationSystemCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
+   BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dcts)
 }
 
 CONSTRUCT
@@ -33,5 +37,16 @@ WHERE
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
    ?synonym apf:strSplit (?synonyms ";")
    BIND (STRLANG(?synonym,"en") AS ?synonymen)
+}
+
+CONSTRUCT
+{
+    ?f dc:source ?dce.
+}
+FROM <file:../function.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   ?dce apf:strSplit (?dcesource ";")
 }
 

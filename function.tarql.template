@@ -36,6 +36,6 @@ FROM <file:../function.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
-   ?dce apf:strSplit (?dcesource ",")                                                                                                                         
+   ?dce apf:strSplit (?dcesource ";")
 }
 
