@@ -1,0 +1,12 @@
+@prefix : <http://hitontology.eu/ontology/> .
+
+:GnuHealth
+	:directFeature
+		:ListHealthWorkforceCadresAndRelatedIdentificationInformation,
+		:MonitorPerformanceOfHealthcareProviders,
+		:ManageCertificationregistrationOfHealthcareProviders,
+		:PublicHealthEventNotification;
+	:directEnterpriseFunction
+		:PrescriptionAndMedicationManagement,
+		:ClientHealthRecords.
+
