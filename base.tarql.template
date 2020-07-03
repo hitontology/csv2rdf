@@ -22,6 +22,7 @@ CONSTRUCT
   hito:interoperability ?interoperabilityO;
   hito:programmingLanguage ?programmingLanguageO;
   hito:operatingSystem ?operatingSystemO;
+  hito:softwareProductComponent ?componentO;
   hito:license ?licenseO.
 
 }
@@ -49,6 +50,7 @@ WHERE
    BIND (IF(BOUND(?databaseSystem)&&(?databaseSystem != ''), URI(CONCAT(tarql:expandPrefix('hito'),?databaseSystem)), ?nothing) AS ?databaseSystemO)
    BIND (IF(BOUND(?interoperability)&&(?interoperability != ''), URI(CONCAT(tarql:expandPrefix('hito'),?interoperability)), ?nothing) AS ?interoperabilityO)
    BIND (IF(BOUND(?license)&&(?license != ''), URI(CONCAT(tarql:expandPrefix('hito'),?license)), ?nothing) AS ?licenseO)
+   BIND (IF(BOUND(?component)&&(?component != ''), URI(CONCAT(tarql:expandPrefix('hito'),?component)), ?nothing) AS ?componentO)
 
    # programming library not specified yet
    BIND (IF(BOUND(?programmingLibrary)&&(?programmingLibrary != ''), URI(CONCAT(tarql:expandPrefix('hito'),?programmingLibrary)), ?nothing) AS ?programmingLibraryO)
