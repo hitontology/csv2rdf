@@ -1,22 +1,33 @@
-en,uri,whodhin,whodiuri,citation
-Clinical Documentation,ClinicalDocumentation,2.1,ClientIdentificationAndRegistration,
-Record Management,RecordManagement,2.2,ClientHealthRecords,
-Patient Administration,PatientAdministration,2.2,ClientHealthRecords,
-Report Generation,ReportGeneration,,,6
-Accounting,Accounting,3.5,HealthFinancing,
-Billing,Billing,3.5,HealthFinancing,
-Coding,Coding,,,
-Statistical Analysis,StatisticalAnalysis,,,
-Staff Management,StaffManagement,3.1,HumanResourceManagement,
-Epidemiology,Epidemiology,,,
-Medication Management,MedicationManagement,2.9,PrescriptionAndMedicationManagement,
-Patient Management,PatientManagement,2.8,HealthcareProviderTraining,
-Patient Evaluations,PatientEvaluations,,,
-Patient Appointment and Admission Management,PatientAppointmentAndAdmissionManagement,2.1,ClientIdentificationAndRegistration,
-"Occhiolino,the GNU LIMS: Laboratory Information Management System",Occhiolino,2.10,ClientIdentificationAndRegistration,
-Financial Accounting,FinancialAccounting,3.5,HealthFinancing,
-Analytic Accounting,AnalyticAccounting,,,
-Products and Services Management,ProductsAndServicesManagement,3.2,SupplyChainManagement,
-Purchase Administration,PurchaseAdministration,,,
-Stock Management,StockManagement,3.2,SupplyChainManagement,
-Access Management,AccessManagement,,,
+en,uri,whodiuri,bburi
+Patient Management,PatientManagement,,PatientAdministration
+Patient Evaluations,PatientEvaluations,,MedicalAdmission
+Patient Evaluations,PatientEvaluations,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Patient Appointment,PatientAppointment,,AppointmentScheduling
+Admission Management,AdmissionManagement,,AdministrativeAdmission
+Admission Management,AdmissionManagement,ClientIdentificationAndRegistration,
+Laboratory Management,LaboratoryManagement,LaboratoryAndDiagnosticsImagingManangement,
+Laboratory Management,LaboratoryManagement,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Financial Accounting,FinancialAccounting,,FinancialAccounting
+Financial Accounting,FinancialAccounting,HealthFinancing,
+Analytic Accounting,AnalyticAccounting,,CostAndResultsAccounting
+Products Management,ProductsManagement,,MaterialAndMedicationManagement
+Products Management,ProductsManagement,EquipmentAndAssetManagement,
+Services Management/Invoicing Patients,ServicesManagement/InvoicingPatients,HealthFinancing,
+Services Management/Invoicing Patients,ServicesManagement/InvoicingPatients,ClientFinancialTransactions,
+Services Management/Invoicing Patients,ServicesManagement/InvoicingPatients,,AdministrativeDischargeAndFinalBilling
+Purchase Administration,PurchaseAdministration,,unknown
+Stock Management,StockManagement,,SupplyAndDisposalManagement
+Stock Management,StockManagement,SupplyChainManagement,
+Access Management,AccessManagement,,unknown
+Socioeconomics,Socioeconomics,,unknown
+Hospital Management,HospitalManagement,,HospitalManagement
+Gynecologic Care,GynecologicCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Obstetrics,Obstetrics,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Genetics,Genetics,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Surgery,Surgery,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Pediatric Care,PediatricCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Intensive Care,IntensiveCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Neglected Tropical Diseases Care,NeglectedTropicalDiseasesCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
+Nursing,Nursing,,ExecutionOfDiagnosticTherapeuticAndNursingProcedures
+empty,Empty,PrescriptionAndMedicationManagement,
+empty,Empty,ClientHealthRecords,

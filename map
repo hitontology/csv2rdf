@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 #SUBS="BbArchitecture BbReferenceModel"
-SUBS="Standard"
-#SUBS="WhoDhiClient WhoDhiHealthSystemManager WhoDhiDataService WhoDhiSystemCategory WhoDhiHealthcareProvider"
+#SUBS="BbArchitecture"
+SUBS="Bahmni BbApplicationComponent BbArchitecture BbReferenceModel GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
 
-#TEMPLATES="subfeature feature function applicationsystem featurecitation functioncitation"
-TEMPLATES="standard"
+TEMPLATES="base standard subfeature feature function applicationsystem featurecitation functioncitation organisationalunit"
+#TEMPLATES="standard"
 rm -f /tmp/combined.nt
 for s in $SUBS
 do
@@ -31,7 +31,10 @@ do
    fi
   done 
   echo "** Merging ***********************************x************"
-  rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
+  if [ -e ${s}/base.ttl ]
+  then
+   rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
+  fi
   cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
   rapper -i turtle -o ntriples ${s}/out/all.ttl >> /tmp/combined.nt
   echo "** Testing ************************************************"
