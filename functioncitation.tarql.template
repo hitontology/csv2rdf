@@ -33,3 +33,15 @@ WHERE
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?who)) AS ?w)
 }
 
+CONSTRUCT
+{
+    ?f hito:enterpriseFunctionClassified ?b.
+}
+FROM <file:../functioncitation.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   ?bb apf:strSplit (?bburi ";")
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?bb)) AS ?b)
+}
+
