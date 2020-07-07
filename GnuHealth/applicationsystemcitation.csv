@@ -1,5 +1,5 @@
-en,uri,whodiuri,bburi
-Electronic Medical Record (EMR),ElectronicMedicalRecordEmr,SharedHealthRecordAndHealthInformationRespositories,
-Hospital management Information System,HospitalManagementInformationSystem,,
-Health Information System (HIS),HealthInformationSystemHis,,Clinical Information System
-Health Information System (HIS),HealthInformationSystemHis,,Electronic Patient Record System
+en,uri,classifieduri
+Electronic Medical Record (EMR),ElectronicMedicalRecordEmr,SharedHealthRecordAndHealthInformationRespositories
+Hospital management Information System,HospitalManagementInformationSystem,UnknownApplicationSystem
+Health Information System (HIS),HealthInformationSystemHis,ClinicalInformationSystem
+Health Information System (HIS),HealthInformationSystemHis,ElectronicPatientRecordSystem
