@@ -15,11 +15,11 @@ Products Management,ProductsManagement,EquipmentAndAssetManagement,
 Services Management/Invoicing Patients,ServicesManagement/InvoicingPatients,HealthFinancing,
 Services Management/Invoicing Patients,ServicesManagement/InvoicingPatients,ClientFinancialTransactions,
 Services Management/Invoicing Patients,ServicesManagement/InvoicingPatients,,AdministrativeDischargeAndFinalBilling
-Purchase Administration,PurchaseAdministration,,unknown
+Purchase Administration,PurchaseAdministration,,UnknownFunctionClassified
 Stock Management,StockManagement,,SupplyAndDisposalManagement
 Stock Management,StockManagement,SupplyChainManagement,
-Access Management,AccessManagement,,unknown
-Socioeconomics,Socioeconomics,,unknown
+Access Management,AccessManagement,,UnknownFunctionClassified
+Socioeconomics,Socioeconomics,,UnknownFunctionClassified
 Hospital Management,HospitalManagement,,HospitalManagement
 Gynecologic Care,GynecologicCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
 Obstetrics,Obstetrics,,ExecutionOfDiagnosticAndTherapeuticProcedures
@@ -29,5 +29,3 @@ Pediatric Care,PediatricCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
 Intensive Care,IntensiveCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
 Neglected Tropical Diseases Care,NeglectedTropicalDiseasesCare,,ExecutionOfDiagnosticAndTherapeuticProcedures
 Nursing,Nursing,,ExecutionOfDiagnosticTherapeuticAndNursingProcedures
-empty,Empty,PrescriptionAndMedicationManagement,
-empty,Empty,ClientHealthRecords,
