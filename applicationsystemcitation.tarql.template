@@ -11,7 +11,7 @@ CONSTRUCT
 
     ?product hito:applicationSystem ?citation.
 }
-FROM <file:../applicationsystem.csv>
+FROM <file:../applicationsystemcitation.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?citation)
@@ -25,7 +25,7 @@ CONSTRUCT
 {
     ?citation hito:applicationSystemClassified ?classi.
 }
-FROM <file:../applicationsystem.csv>
+FROM <file:../applicationsystemcitation.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?citation)
