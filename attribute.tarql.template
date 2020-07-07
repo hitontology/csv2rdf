@@ -26,7 +26,7 @@ CONSTRUCT
   hito:license ?licenseO.
 
 }
-FROM <file:../base.csv>
+FROM <file:../attribute.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}")) AS ?product)
