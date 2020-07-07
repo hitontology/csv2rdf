@@ -36,9 +36,9 @@ WHERE
    BIND (IF(BOUND(?comment)&&(?comment != ''), STRLANG(?comment,"en"), ?nothing) AS ?commentO)
 
    # rdfs:Resource, any URL, no specific prefix
-   BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dctsourceO)
-   BIND (IF(BOUND(?repository)&&(?repository != ''), URI(tarql:expandPrefixedName(?repository)), ?nothing) AS ?repositoryO)
-   BIND (IF(BOUND(?homepage)&&(?homepage != ''), URI(tarql:expandPrefixedName(?homepage)), ?nothing) AS ?homepageO)
+   BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(?dctsource), ?nothing) AS ?dctsourceO)
+   BIND (IF(BOUND(?repository)&&(?repository != ''), URI(?repository), ?nothing) AS ?repositoryO)
+   BIND (IF(BOUND(?homepage)&&(?homepage != ''), URI(?homepage), ?nothing) AS ?homepageO)
 
    # DBpedia resource namespace
    BIND (IF(BOUND(?language)&&(?language != ''), URI(CONCAT(tarql:expandPrefix('dbr'),?language)), ?nothing) AS ?languageO)
