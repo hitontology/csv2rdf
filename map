@@ -2,9 +2,10 @@
 set -e
 #SUBS="BbArchitecture BbReferenceModel"
 #SUBS="BbArchitecture"
-SUBS="Bahmni BbApplicationComponent BbArchitecture BbReferenceModel GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
+#SUBS="Bahmni BbArchitecture BbReferenceModel GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
+SUBS="GnuHealth Orthanc"
 
-TEMPLATES="base standard subfeature feature function applicationsystem featurecitation functioncitation organisationalunit"
+TEMPLATES="attribute standard subfeature feature function applicationsystem applicationsystemcitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
 #TEMPLATES="standard"
 rm -f /tmp/combined.nt
 for s in $SUBS
