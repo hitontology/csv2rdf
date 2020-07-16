@@ -4,7 +4,6 @@ patient admission,PatientAdmission
 "decision making, planning and organization of patient treatment",DecisionMakingPlanningAndOrganizationOfPatientTreatment
 order entry,OrderEntry
 "execution of diagnostic, therapeutic and nursing procedures",ExecutionOfDiagnosticTherapeuticAndNursingProcedures
-coding of diagnoses and procedures,CodingOfDiagnosesAndProcedures
 patient discharge and transfer to other institutions,PatientDischargeAndTransferToOtherInstitutions
 supply management scheduling and resource allocation,SupplyManagementSchedulingAndResourceAllocation
 scheduling and resource allocation,SchedulingAndResourceAllocation
@@ -12,8 +11,6 @@ human resources management,HumanResourcesManagement
 appointment scheduling,AppointmentScheduling
 decision making and patient information,DecisionMakingAndPatientInformation
 preparation of an order,PreparationOfAnOrder
-execution of diagnostic and therapeutic procedures,ExecutionOfDiagnosticAndTherapeuticProcedures
-coding of diagnoses and procedures,CodingOfDiagnosesAndProcedures
 administrative discharge and final billing,AdministrativeDischargeAndFinalBilling
 catering,Catering
 administration of human resource master data,AdministrationOfHumanResourceMasterData
@@ -49,7 +46,7 @@ information management,InformationManagement
 opening a patient record,OpeningAPatientRecord
 internal quality management,InternalQualityManagement
 strategic information management,StrategicInformationManagement
-administration and provision of medical records,AdministrationAndProvisionOfMedicalRecords
+ ,
 performance of legal notification requirements,PerformanceOfLegalNotificationRequirements
 operational information management,OperationalInformationManagement
 long term archiving,LongTermArchiving

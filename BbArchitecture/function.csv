@@ -1,26 +1,25 @@
 n,en,uri,dctsource-suffix,dctsource,dcesource
-6.1,Scheduling and resource allocation,SchedulingAndResourceAllocation,SchedulingAndResourceAllocation,bb:SchedulingAndResourceAllocation,"Table6.1,Table6.4,Table6.6,Table6.7"
+6.1,Scheduling and resource allocation,SchedulingAndResourceAllocation,SchedulingAndResourceAllocation,bb:SchedulingAndResourceAllocation,Table6.1;Table6.4;Table6.6;Table6.7
 6.1,Patient identification and checking for recurrent,PatientIdentificationAndCheckingForRecurrent,PatientIdentificationAndCheckingForRecurrent,bb:PatientIdentificationAndCheckingForRecurrent,Table6.1
 6.1,Administrative admission,AdministrativeAdmission,AdministrativeAdmission,bb:AdministrativeAdmission,Table6.1
 6.1,Visitor and information service,VisitorAndInformationService,VisitorAndInformationService,bb:VisitorAndInformationService,Table6.1
-6.1,Coding of diagnoses and procedures,CodingOfDiagnosesAndProcedures,CodingOfDiagnosesAndProcedures,bb:CodingOfDiagnosesAndProcedures,"Table6.1,Table6.3,Table6.6,Table6.7,Table6.8"
-6.1,Administrative discharge and billing,AdministrativeDischargeAndBilling,AdministrativeDischargeAndBilling,bb:AdministrativeDischargeAndBilling,"Table6.1,Table6.4"
-6.2,Medical admission,MedicalAdmission,MedicalAdmission,bb:MedicalAdmission,"Table6.2,Table6.4,Table6.6,Table6.7,Table6.8"
-6.2,Decision making and planning of patient treatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,bb:DecisionMakingPlanningAndOrganizationOfPatientTreatment,"Table6.2,Table6.4"
-6.2,"Execution of diagnostic, therapeutic and nursing Procedures",ExecutionOfDiagnosticTherapeuticAndNursingProcedures,ExecutionOfDiagnosticTherapeuticAndNursingProcedures,bb:ExecutionOfDiagnosticTherapeuticAndNursingProcedures,"Table6.2,Table6.4"
-6.2,Patient discharge and transfer to other institutions,PatientDischargeAndTransferToOtherInstitutions,PatientDischargeAndTransferToOtherInstitutions,bb:PatientDischargeAndTransferToOtherInstitutions,"Table6.2,Table6.4,Table6.6,Table6.7"
-6.2,Human resource management,HumanResourceManagement,HumanResourceManagement,bb:HumanResourceManagement,"Table6.2,Table6.3,Table6.4,Table6.6,Table6.11"
+6.1,Coding of diagnoses and procedures,CodingOfDiagnosesAndProcedures,CodingOfDiagnosesAndProcedures,bb:CodingOfDiagnosesAndProcedures,Table6.1;Table6.3;Table6.6;Table6.7;Table6.8
+6.1,Administrative discharge and billing,AdministrativeDischargeAndBilling,AdministrativeDischargeAndBilling,bb:AdministrativeDischargeAndBilling,Table6.1;Table6.4
+6.2,Medical admission,MedicalAdmission,MedicalAdmission,bb:MedicalAdmission,Table6.2;Table6.4;Table6.6;Table6.7;Table6.8
+6.2,Decision making and planning of patient treatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,bb:DecisionMakingPlanningAndOrganizationOfPatientTreatment,Table6.2;Table6.4
+6.2,"Execution of diagnostic, therapeutic and nursing Procedures",ExecutionOfDiagnosticTherapeuticAndNursingProcedures,ExecutionOfDiagnosticTherapeuticAndNursingProcedures,bb:ExecutionOfDiagnosticTherapeuticAndNursingProcedures,Table6.2;Table6.4;Table6.6
+6.2,Patient discharge and transfer to other institutions,PatientDischargeAndTransferToOtherInstitutions,PatientDischargeAndTransferToOtherInstitutions,bb:PatientDischargeAndTransferToOtherInstitutions,Table6.2;Table6.4;Table6.6;Table6.7
+6.2,Human resource management,HumanResourceManagement,HumanResourceManagement,bb:HumanResourceManagement,Table6.2;Table6.3;Table6.4;Table6.6;Table6.11
 6.3,Nursing admission,NursingAdmission,NursingAdmission,bb:NursingAdmission,Table6.3
-6.3,Medical and nursing care planning,ExecutionOfOperations,MedicalAndNursingCarePlanning,bb:MedicalAndNursingCarePlanning,"Table6.3,Table6.6"
+6.3,Medical and nursing care planning,ExecutionOfOperations,MedicalAndNursingCarePlanning,bb:MedicalAndNursingCarePlanning,Table6.3;Table6.6
 6.3,Execution of nursing procedures,ExecutionOfNursingProcedures,ExecutionOfNursingProcedures,bb:ExecutionOfNursingProcedures,Table6.3
 6.3,Nursing discharge and nursing report writing,NursingDischargeAndNursingReportWriting,NursingDischargeAndNursingReportWriting,bb:NursingDischargeAndNursingReportWriting,Table6.3
-6.4,"Execution of diagnostic, therapeutic and nursing procedures",ExecutionOfDiagnosticTherapeuticAndNursingProcedures,ExecutionOfDiagnosticTherapeuticAndNursingProcedures,bb:ExecutionOfDiagnosticTherapeuticAndNursingProcedures,"Table6.4,Table6.6"
 6.5,Order entry,OrderEntry,OrderEntry,bb:OrderEntry,Table6.5
-6.6,Supply and disposal management,SupplyAndDisposalManagement,SupplyAndDisposalManagement,bb:SupplyAndDisposalManagement,"Table6.6,Table6.7,Table6.11"
+6.6,Supply and disposal management,SupplyAndDisposalManagement,SupplyAndDisposalManagement,bb:SupplyAndDisposalManagement,Table6.6;Table6.7;Table6.11
 6.7,Decision making and patient information,DecisionMakingAndPatientInformation,DecisionMakingAndPatientInformation,bb:DecisionMakingAndPatientInformation,Table6.7
 6.7,Execution of an operation,ExecutionOfAnOperation,ExecutionOfAnOperation,bb:ExecutionOfAnOperation,Table6.7
-6.7,Work organization and time management,WorkOrganizationAndTimeManagement,WorkOrganizationAndTimeManagement,bb:WorkOrganizationAndTimeManagement,"Table6.7,Table6.8"
-6.8,Execution of radiological examinations,ExecutionOfRadiologicalExaminations,,bb:,"Table6.8,Table6.9"
+6.7,Work organization and time management,WorkOrganizationAndTimeManagement,WorkOrganizationAndTimeManagement,bb:WorkOrganizationAndTimeManagement,Table6.7;Table6.8
+6.8,Execution of radiological examinations,ExecutionOfRadiologicalExaminations,,bb:,Table6.8;Table6.9
 6.8,Appointment scheduling,AppointmentScheduling,AppointmentScheduling,bb:AppointmentScheduling,Table6.8
 6.8,Management of Medical Devices,ManagementOfMedicalDevices,ManagementOfMedicalDevices,bb:ManagementOfMedicalDevices,Table6.8
 6.10,Execution of lab examinations,ExecutionOfLabExaminations,ExecutionOfLabExaminations,bb:ExecutionOfLabExaminations,Table6.10
