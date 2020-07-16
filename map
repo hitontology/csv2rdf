@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
-#SUBS="BbArchitecture BbReferenceModel"
-#SUBS="BbArchitecture"
-#SUBS="Bahmni BbArchitecture BbReferenceModel GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
+#SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
 SUBS="GnuHealth Orthanc"
 
 TEMPLATES="attribute standard subfeature feature function applicationsystem applicationsystemcitation featurecitation functioncitation organizationalunitcitation usergroupcitation"

@@ -1,0 +1,26 @@
+en,uri,dctsource,dcesource,synonyms,comment
+Patient Administration System,BbPatientAdministrationSystem,bb:PatientAdministrationSystem,Table 6.1,,
+Medical Documentation System,BbMedicalDocumentationSystem,bb:MedicalDocumentationSystem,Table 6.2,,
+Nursing Management and Documentation System,BbNursingManagementAndDocumentationSystem,bb:NursingManagementAndDocumentationSystem,Table 6.3,,
+Outpatient Management System,BbOutpatientManagementSystem,bb:OutpatientManagementSystem,Table 6.4,,
+Provider or Physician Order Entry System,BbProviderOrPhysicianOrderEntrySystem,,Table 6.5,POE,
+Patient Data Management System,BbPatientDataManagementSystem,bb:PatientDataManagementSystem,Table 6.6,PDMS,
+Operation Management System,BbOperationManagementSystem,bb:OperationManagementSystem,Table 6.7,,
+Radiology Information System,BbRadiologyInformationSystem,bb:RadiologyInformationSystem,Table 6.8,RIS,
+Picture Archiving and Communication System,BbPictureArchivingAndCommunicationSystem,bb:PictureArchivingAndCommunicationSystem,Table 6.9,PACS,
+Laboratory Information System,BbLaboratoryInformationSystem,bb:LaboratoryInformationSystem,Table 6.10,LIS,
+Enterprise Resource Planning System,BbEnterpriseResourcePlanningSystem,bb:EnterpriseResourcePlanningSystem,Table 6.11,,
+Data Warehouse System,BbDataWarehouseSystem,bb:DataWarehouseSystem,Table 6.12,,
+Document Archiving System,BbDocumentArchivingSystem,bb:DocumentArchivingSystem,Table 6.13,,
+Blood bank management system,BbBloodBankManagementSystem,bb:BloodBankManagementSystem,Table 6.14,,"Supports blood donor services, blood analyses, administration of blood bottles."
+Cardiovascular information system,BbCardiovascularInformationSystem,bb:CardiovascularInformationSystem,Table 6.14,CVIS,Provides many features of a clinical information system and a radiology information system while tailoring the special needs of a cardiology department.
+Decision support system,BbDecisionSupportSystem,bb:DecisionSupportSystem,Table 6.14,,A knowledge-based system which assists a doctor in finding the right diagnosis or treatment for a specific patient.
+Dialysis information system,BbDialysisInformationSystem,bb:DialysisInformationSystem,Table 6.14,,"Provides many features of a clinical information system while tailoring the special needs of a dialysis department, has interfaces to hemodialysis machines."
+Digital dictation system,BbDigitalDictationSystem,bb:DigitalDictationSystem,Table 6.14,,"Offers features for digital voice recording and speech recognition, is often integrated into medical information systems and supports report, finding and letter writing."
+Oncology information system,BbOncologyInformationSystem,bb:OncologyInformationSystem,Table 6.14,,Provides many features of a clinical information system while tailoring the special needs of an oncology department.
+Orthopedics information system,BbOrthopedicsInformationSystem,bb:OrthopedicsInformationSystem,Table 6.14,,"Provides many features of a clinical information system while tailoring the special needs of an orthopedics department, can include a computer-aided design (CAD) system for transplant planning."
+Pathology information system,BbPathologyInformationSystem,bb:PathologyInformationSystem,Table 6.14,,"Has similar features as a laboratory information system, e. g. receiving orders, writing reports."
+Pharmacy information system,BbPharmacyInformationSystem,bb:PharmacyInformationSystem,Table 6.14,,"Supports the workflow in the pharmacy department: receiving drug orders, managing the drug stock, distributing drugs throughout the hospital."
+Teleradiology system,BbTeleradiologySystem,bb:TeleradiologySystem,Table 6.14,,Enables evaluations of radiological images from (external) radiologists' remote workplaces and may be closely connected to RIS and PACS.
+Clinical Information System,BbClinicalInformationSystem,bb:ClinicalInformationSystem,Chapter 6.4.15,CIS;EPR System,
+Electronic Patient Record System,BbElectronicPatientRecordSystem,bb:ElectronicPatientRecordSystem,Chapter 6.4.15,EPR System;CIS,

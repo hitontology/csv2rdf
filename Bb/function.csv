@@ -1,0 +1,69 @@
+n,en,uri,dctsource-suffix,dctsource,dcesource
+6.1,Scheduling and resource allocation,BbSchedulingAndResourceAllocation,SchedulingAndResourceAllocation,bb:SchedulingAndResourceAllocation,Table6.1;Table6.4;Table6.6;Table6.7
+6.1,Patient identification and checking for recurrent,BbPatientIdentificationAndCheckingForRecurrent,PatientIdentificationAndCheckingForRecurrent,bb:PatientIdentificationAndCheckingForRecurrent,Table6.1
+6.1,Administrative admission,BbAdministrativeAdmission,AdministrativeAdmission,bb:AdministrativeAdmission,Table6.1
+6.1,Visitor and information service,BbVisitorAndInformationService,VisitorAndInformationService,bb:VisitorAndInformationService,Table6.1
+6.1,Coding of diagnoses and procedures,BbCodingOfDiagnosesAndProcedures,CodingOfDiagnosesAndProcedures,bb:CodingOfDiagnosesAndProcedures,Table6.1;Table6.3;Table6.6;Table6.7;Table6.8
+6.1,Administrative discharge and billing,BbAdministrativeDischargeAndBilling,AdministrativeDischargeAndBilling,bb:AdministrativeDischargeAndBilling,Table6.1;Table6.4
+6.2,Medical admission,BbMedicalAdmission,MedicalAdmission,bb:MedicalAdmission,Table6.2;Table6.4;Table6.6;Table6.7;Table6.8
+6.2,Decision making and planning of patient treatment,BbDecisionMakingAndPlanningOfPatientTreatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,bb:DecisionMakingPlanningAndOrganizationOfPatientTreatment,Table6.2;Table6.4
+6.2,"Execution of diagnostic, therapeutic and nursing Procedures",BbExecutionOfDiagnosticTherapeuticAndNursingProcedures,ExecutionOfDiagnosticTherapeuticAndNursingProcedures,bb:ExecutionOfDiagnosticTherapeuticAndNursingProcedures,Table6.2;Table6.4;Table6.6
+6.2,Patient discharge and transfer to other institutions,BbPatientDischargeAndTransferToOtherInstitutions,PatientDischargeAndTransferToOtherInstitutions,bb:PatientDischargeAndTransferToOtherInstitutions,Table6.2;Table6.4;Table6.6;Table6.7
+6.2,Human resource management,BbHumanResourceManagement,HumanResourceManagement,bb:HumanResourceManagement,Table6.2;Table6.3;Table6.4;Table6.6;Table6.11
+6.3,Nursing admission,BbNursingAdmission,NursingAdmission,bb:NursingAdmission,Table6.3
+6.3,Medical and nursing care planning,BbMedicalAndNursingCarePlanning,MedicalAndNursingCarePlanning,bb:MedicalAndNursingCarePlanning,Table6.3;Table6.6
+6.3,Execution of nursing procedures,BbExecutionOfNursingProcedures,ExecutionOfNursingProcedures,bb:ExecutionOfNursingProcedures,Table6.3
+6.3,Nursing discharge and nursing report writing,BbNursingDischargeAndNursingReportWriting,NursingDischargeAndNursingReportWriting,bb:NursingDischargeAndNursingReportWriting,Table6.3
+6.5,Order entry,BbOrderEntry,OrderEntry,bb:OrderEntry,Table6.5
+6.6,Supply and disposal management,BbSupplyAndDisposalManagement,SupplyAndDisposalManagement,bb:SupplyAndDisposalManagement,Table6.6;Table6.7;Table6.11
+6.7,Decision making and patient information,BbDecisionMakingAndPatientInformation,DecisionMakingAndPatientInformation,bb:DecisionMakingAndPatientInformation,Table6.7
+6.7,Execution of an operation,BbExecutionOfAnOperation,ExecutionOfAnOperation,bb:ExecutionOfAnOperation,Table6.7
+6.7,Work organization and time management,BbWorkOrganizationAndTimeManagement,WorkOrganizationAndTimeManagement,bb:WorkOrganizationAndTimeManagement,Table6.7;Table6.8
+6.8,Execution of radiological examinations,BbExecutionOfRadiologicalExaminations,,bb:,Table6.8;Table6.9
+6.8,Appointment scheduling,BbAppointmentScheduling,AppointmentScheduling,bb:AppointmentScheduling,Table6.8
+6.8,Management of Medical Devices,BbManagementOfMedicalDevices,ManagementOfMedicalDevices,bb:ManagementOfMedicalDevices,Table6.8
+6.10,Execution of lab examinations,BbExecutionOfLabExaminations,ExecutionOfLabExaminations,bb:ExecutionOfLabExaminations,Table6.10
+6.11,Controlling,BbControlling,Controlling,bb:Controlling,Table6.11
+6.11,Financial accounting,BbFinancialAccounting,FinancialAccounting,bb:FinancialAccounting,Table6.11
+6.11,Facility management,BbFacilityManagement,FacilityManagement,bb:FacilityManagement,Table6.11
+6.11,Quality management,BbQualityManagement,QualityManagement,bb:QualityManagement,Table6.11
+6.12,Hospital management,BbHospitalManagement,HospitalManagement,bb:HospitalManagement,Table6.12
+6.12,Execution of clinical trials and experiments,BbExecutionOfClinicalTrialsAndExperiments,ExecutionOfClinicalTrialsAndExperiments,bb:ExecutionOfClinicalTrialsAndExperiments,Table6.12
+6.13,Archiving of patient information,BbArchivingOfPatientInformation,ArchivingOfPatientInformation,bb:ArchivingOfPatientInformation,Table6.13
+,patient care,BbPatientCare,,,
+,patient admission,BbPatientAdmission,,,
+,supply management scheduling and resource allocation,BbSupplyManagementSchedulingAndResourceAllocation,,,
+,human resources management,BbHumanResourcesManagement,,,
+,preparation of an order,BbPreparationOfAnOrder,,,
+,administrative discharge and final billing,BbAdministrativeDischargeAndFinalBilling,,,
+,catering,BbCatering,,,
+,administration of human resource master data,BbAdministrationOfHumanResourceMasterData,,,
+,medical and nursing care planning,BbMedicalAndNursingCarePlanning,,,
+,coding of procedures,BbCodingOfProcedures,,,
+,medical discharge and writing the discharge letter,BbMedicalDischargeAndWritingTheDischargeLetter,,,
+,material and medication management,BbMaterialAndMedicationManagement,,,
+,scheduling and resource planning with the medical service unit,BbSchedulingAndResourcePlanningWithTheMedicalServiceUnit,,,
+,human resource planning,BbHumanResourcePlanning,,,
+,nursing discharge and writing the nursing discharge report,BbNursingDischargeAndWritingTheNursingDischargeReport,,,
+,scheduling and resource planning with the patient transport service,BbSchedulingAndResourcePlanningWithThePatientTransportService,,,
+,work organization and time planning,BbWorkOrganizationAndTimePlanning,,,
+,laundry management,BbLaundryManagement,,,
+,payroll accounting,BbPayrollAccounting,,,
+,administration of business trips and further training,BbAdministrationOfBusinessTripsAndFurtherTraining,,,
+,visitor and information services,BbVisitorAndInformationServices,,,
+,hospital administration,BbHospitalAdministration,,,
+,patient administration,BbPatientAdministration,,,
+,cost and results accounting,BbCostAndResultsAccounting,,,
+,information management,BbInformationManagement,,,
+,opening a patient record,BbOpeningAPatientRecord,,,
+,internal quality management,BbInternalQualityManagement,,,
+,strategic information management,BbStrategicInformationManagement,,,
+,performance of legal notification requirements,BbPerformanceOfLegalNotificationRequirements,,,
+,operational information management,BbOperationalInformationManagement,,,
+,long term archiving,BbLongTermArchiving,,,
+,research and education,BbResearchAndEducation,,,
+,tactical information management,BbTacticalInformationManagement,,,
+,research management,BbResearchManagement,,,
+,knowledge inquiry and literature management,BbKnowledgeInquiryAndLiteratureManagement,,,
+,publishing and presenting,BbPublishingAndPresenting,,,
+,education,BbEducation,,,
