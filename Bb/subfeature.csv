@@ -1,5 +1,5 @@
 en,uri,dctsource-suffix,dctsource,super,source,
-Provide means for scheduling patients' appointments,BbProvideMeansForSchedulingPatientsAppointments,ProvideMeansForSchedulingPatientsAppointments,bb:ProvideMeansForSchedulingPatientsAppointments,SchedulingAndResourceAllocation,,
+Provide means for scheduling patients' appointments,BbProvideMeansForSchedulingPatientsAppointments,ProvideMeansForSchedulingPatientsAppointments,bb:ProvideMeansForSchedulingPatientsAppointments,SchedulingAndResourceAllocation;OrderEntry,,
 Provide means for ordering transport services,BbProvideMeansForOrderingTransportServices,ProvideMeansForOrderingTransportServices,bb:ProvideMeansForOrderingTransportServices,SchedulingAndResourceAllocation,,AdministrativeAdmission
 Retrieve patient,BbRetrievePatient,RetrievePatient,bb:RetrievePatient,PatientIdentificationAndCheckingForRecurrent,,AdministrativeDischargeAndBilling
 Generate a unique PIN and a CIN,BbGenerateAUniquePinAndACin,,,PatientIdentificationAndCheckingForRecurrent,,AppointmentScheduling
@@ -61,7 +61,6 @@ Provide means for minimizing adverse drug events,BbProvideMeansForMinimizingAdve
 Calculate dosage of drugs,BbCalculateDosageOfDrugs,CalculateDosageOfDrugs,bb:CalculateDosageOfDrugs,OrderEntry,,
 Provide orders for patient-related examinations,BbProvideOrdersForPatientrelatedExaminations,,,OrderEntry,,
 Select orders from order sets,BbSelectOrdersFromOrderSets,SelectOrdersFromOrderSets,bb:SelectOrdersFromOrderSets,OrderEntry,,
-Provide means for scheduling patient's appointments,BbProvideMeansForSchedulingPatientsAppointments,,,OrderEntry,,
 View patient-related appointments,BbViewPatientrelatedAppointments,,,OrderEntry,,
 Provide means for preparing a care plan,BbProvideMeansForPreparingACarePlan,ProvideMeansForPreparingACarePlan,bb:ProvideMeansForPreparingACarePlan,MedicalAndNursingCarePlanning,,
 Offer decision-support for care planning,BbOfferDecisionsupportForCarePlanning,,,MedicalAndNursingCarePlanning,,
