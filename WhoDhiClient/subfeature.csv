@@ -1,5 +1,4 @@
-n,en,"uri
-",super,supertype,synonyms
+n,en,uri,super,supertype,synonyms
 1.1.1,Transmit health event alerts to specific population group(s),WhoDhiTransmitHealthEventAlertsToSpecificPopulationGroups,TargetedClientCommunication,FeatureClassified,public health event notification;disease notification to specific or pre-identified populations;notification of health events to specific populations based on demographic characteristics;health promotion messaging 
 1.1.2,Transmit targeted health information to client based on health status or demographics,WhoDhiTransmitTargetedHealthInformationToClientBasedOnHealthStatusOrDemographics,TargetedClientCommunication,FeatureClassified,health education;behavior change communication;health promotion communication;client-centered messaging;health communication based on a known client’s health status or clinical history 
 1.1.3,Transmit targeted alerts and reminders to client(s),WhoDhiTransmitTargetedAlertsAndRemindersToClients,TargetedClientCommunication,FeatureClassified,"alerts for preventive services and wellness;notifications and reminders for appointments, medication adherence, or follow-up services;communication for retention in care;continuity of care "
