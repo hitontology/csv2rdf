@@ -19,7 +19,7 @@ n,en,uri,dctsource-suffix,dctsource,dcesource
 6.7,Decision making and patient information,BbDecisionMakingAndPatientInformation,DecisionMakingAndPatientInformation,bb:DecisionMakingAndPatientInformation,Table6.7
 6.7,Execution of an operation,BbExecutionOfAnOperation,ExecutionOfAnOperation,bb:ExecutionOfAnOperation,Table6.7
 6.7,Work organization and time management,BbWorkOrganizationAndTimeManagement,WorkOrganizationAndTimeManagement,bb:WorkOrganizationAndTimeManagement,Table6.7;Table6.8
-6.8,Execution of radiological examinations,BbExecutionOfRadiologicalExaminations,,bb:,Table6.8;Table6.9
+6.8,Execution of radiological examinations,BbExecutionOfRadiologicalExaminations,,,Table6.8;Table6.9
 6.8,Appointment scheduling,BbAppointmentScheduling,AppointmentScheduling,bb:AppointmentScheduling,Table6.8
 6.8,Management of Medical Devices,BbManagementOfMedicalDevices,ManagementOfMedicalDevices,bb:ManagementOfMedicalDevices,Table6.8
 6.10,Execution of lab examinations,BbExecutionOfLabExaminations,ExecutionOfLabExaminations,bb:ExecutionOfLabExaminations,Table6.10
@@ -38,7 +38,6 @@ n,en,uri,dctsource-suffix,dctsource,dcesource
 ,administrative discharge and final billing,BbAdministrativeDischargeAndFinalBilling,,,
 ,catering,BbCatering,,,
 ,administration of human resource master data,BbAdministrationOfHumanResourceMasterData,,,
-,medical and nursing care planning,BbMedicalAndNursingCarePlanning,,,
 ,coding of procedures,BbCodingOfProcedures,,,
 ,medical discharge and writing the discharge letter,BbMedicalDischargeAndWritingTheDischargeLetter,,,
 ,material and medication management,BbMaterialAndMedicationManagement,,,
