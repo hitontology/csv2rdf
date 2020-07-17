@@ -6,7 +6,7 @@ n,en,uri,dctsource-suffix,dctsource,dcesource
 6.1,Coding of diagnoses and procedures,BbCodingOfDiagnosesAndProcedures,CodingOfDiagnosesAndProcedures,bb:CodingOfDiagnosesAndProcedures,Table6.1;Table6.3;Table6.6;Table6.7;Table6.8
 6.1,Administrative discharge and billing,BbAdministrativeDischargeAndBilling,AdministrativeDischargeAndBilling,bb:AdministrativeDischargeAndBilling,Table6.1;Table6.4
 6.2,Medical admission,BbMedicalAdmission,MedicalAdmission,bb:MedicalAdmission,Table6.2;Table6.4;Table6.6;Table6.7;Table6.8
-6.2,Decision making and planning of patient treatment,BbDecisionMakingAndPlanningOfPatientTreatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,bb:DecisionMakingPlanningAndOrganizationOfPatientTreatment,Table6.2;Table6.4
+6.2,Decision making and planning of patient treatment,BbDecisionMakingPlanningAndOrganizationOfPatientTreatment,DecisionMakingPlanningAndOrganizationOfPatientTreatment,bb:DecisionMakingPlanningAndOrganizationOfPatientTreatment,Table6.2;Table6.4
 6.2,"Execution of diagnostic, therapeutic and nursing Procedures",BbExecutionOfDiagnosticTherapeuticAndNursingProcedures,ExecutionOfDiagnosticTherapeuticAndNursingProcedures,bb:ExecutionOfDiagnosticTherapeuticAndNursingProcedures,Table6.2;Table6.4;Table6.6
 6.2,Patient discharge and transfer to other institutions,BbPatientDischargeAndTransferToOtherInstitutions,PatientDischargeAndTransferToOtherInstitutions,bb:PatientDischargeAndTransferToOtherInstitutions,Table6.2;Table6.4;Table6.6;Table6.7
 6.2,Human resource management,BbHumanResourceManagement,HumanResourceManagement,bb:HumanResourceManagement,Table6.2;Table6.3;Table6.4;Table6.6;Table6.11
