@@ -1,5 +1,5 @@
 label,comment,repository,programmingLibrary,homepage,language,client,databaseSystem,interoperability,programmingLanguage,operatingSystem,license,component
 Orthanc,,https://hg.orthanc-server.com/,,https://www.orthanc-server.com/,English_language,WebBased,PostgreSql,DICOM,http://dbpedia.org/resource/C++,Unix-like,GNU_Free_Documentation_License,
-,,,,,,,,Rest,,Microsoft_Windows,,
+,,,,,,,,REST,,Microsoft_Windows,,
 ,,,,,,,,,,Linux,,
 ,,,,,,,,,,OS_X,,
