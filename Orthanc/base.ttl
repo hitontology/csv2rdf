@@ -3,6 +3,6 @@
 :Orthanc
 	:directFeature :CaptureFromDigitalDevices;
 	:directEnterpriseFunction
-		:ResearchAndEducation,
-		:ExecutionOfDiagnosticAndTherapeuticProcedures,
-		:LaboratoryAndDiagnosticsImagingManagement.
+		:BbResearchAndEducation,
+		:BbExecutionOfDiagnosticTherapeuticAndNursingProcedures,
+		:WhoDhiLaboratoryAndDiagnosticsImagingManagement.

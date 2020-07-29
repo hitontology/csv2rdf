@@ -6,6 +6,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX bb: <http://www.snik.eu/ontology/bb/>
 PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX swol: <http://www.ebi.ac.uk/swo/license/>
 
 CONSTRUCT
 {
@@ -49,7 +50,7 @@ WHERE
    BIND (IF(BOUND(?client)&&(?client != ''), URI(CONCAT(tarql:expandPrefix('hito'),?client)), ?nothing) AS ?clientO)
    BIND (IF(BOUND(?databaseSystem)&&(?databaseSystem != ''), URI(CONCAT(tarql:expandPrefix('hito'),?databaseSystem)), ?nothing) AS ?databaseSystemO)
    BIND (IF(BOUND(?interoperability)&&(?interoperability != ''), URI(CONCAT(tarql:expandPrefix('hito'),?interoperability)), ?nothing) AS ?interoperabilityO)
-   BIND (IF(BOUND(?license)&&(?license != ''), URI(CONCAT(tarql:expandPrefix('hito'),?license)), ?nothing) AS ?licenseO)
+   BIND (IF(BOUND(?license)&&(?license != ''), URI(CONCAT(tarql:expandPrefix('swol'),?license)), ?nothing) AS ?licenseO)
    BIND (IF(BOUND(?component)&&(?component != ''), URI(CONCAT(tarql:expandPrefix('hito'),?component)), ?nothing) AS ?componentO)
 
    # programming library not specified yet
