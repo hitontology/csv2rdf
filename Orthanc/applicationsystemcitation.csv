@@ -1,3 +1,3 @@
-en,uri,classifieduri
-Dicom server,DicomServer,PictureArchivingAndCommunicationSystem
-mini-PACS,Minipacs,PictureArchivingAndCommunicationSystem
+en,uri,classifieduri,note for us
+Dicom server,DicomServer,BbPictureArchivingAndCommunicationSystem,
+mini-PACS,MiniPacs,BbPictureArchivingAndCommunicationSystem,
