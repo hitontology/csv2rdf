@@ -1,8 +1,8 @@
 n,en,uri,whodhin,whodhiuri
 1,Patient Registration,PatientRegistration,2.1,WhoDhiClientIdentificationAndRegistration
-2,Clinical Services,ClinicalServices,"2.2,2.5,2.7,2.8,2.9","WhoDhiClientHealthRecords,WhoDhiHealthcareProviderCommunication,WhoDhiHealthWorkerActivityPlanningAndScheduling,WhoDhiHealthcareProviderTraining,WhoDhiPrescriptionAndMedicationManagement"
+2,Clinical Services,ClinicalServices,"2.2,2.5,2.7,2.8,2.9",WhoDhiClientHealthRecords;WhoDhiHealthcareProviderCommunication;WhoDhiHealthWorkerActivityPlanningAndScheduling;WhoDhiHealthcareProviderTraining;WhoDhiPrescriptionAndMedicationManagement
 3,Laboratory,Laboratory,2.1,WhoDhiClientIdentificationAndRegistration
-4,Inpatient Management,InpatientManagement,"2.1,2.2","WhoDhiClientIdentificationAndRegistration,WhoDhiClientHealthRecords"
+4,Inpatient Management,InpatientManagement,"2.1,2.2",WhoDhiClientIdentificationAndRegistration;WhoDhiClientHealthRecords
 5,Stock Management,StockManagement,3.2,WhoDhiSupplyChainManagement
 6,Billing,Billing,3.5,WhoDhiHealthFinancing
 7,Reporting,Reporting,,
