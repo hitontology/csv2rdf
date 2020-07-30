@@ -1,10 +1,42 @@
 #!/bin/bash
 set -e
-#SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
-SUBS="GnuHealth Orthanc"
+SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
+#SUBS="WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
 
 TEMPLATES="attribute standard subfeature feature function applicationsystem applicationsystemcitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
 #TEMPLATES="standard"
+
+function map
+{
+ echo "** DIRECTORY ${s} ******************************************************************************"
+ mkdir -p ${s}/tmp
+ mkdir -p ${s}/tmp/old
+ mv ${s}/tmp/*.nt ${s}/tmp/old || true
+ for t in $TEMPLATES
+ do
+  csv="${s}/${t}.csv"
+  if [ -e $csv ]
+  then
+   echo "**** Using Template ${t} on ${csv} **************************************************************************"
+   mkdir -p ${s}/out
+   sed "s|{SUB}|${s}|g" ${t}.tarql.template > ${s}/tmp/${t}.tarql
+   tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.nt
+  else
+   echo "**** WARNING: ${csv} DOES NOT EXIST, SKIPPING TEMPLATE ${t} *******************************"
+  fi
+ done 
+ echo "** Merging ***********************************x************"
+ if [ -e ${s}/base.ttl ]
+ then
+  rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
+ fi
+ cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
+ rapper -i turtle -o ntriples ${s}/out/all.ttl >> /tmp/combined.nt
+ echo "** Testing ************************************************"
+ rapper -i turtle -c ${s}/out/all.ttl
+ echo "********************************************************************************************************"
+}
+
 rm -f /tmp/combined.nt
 for s in $SUBS
 do
@@ -12,33 +44,7 @@ do
  then
   echo "** ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ********************************"
  else
-  echo "** DIRECTORY ${s} ******************************************************************************"
-  mkdir -p ${s}/tmp
-  mkdir -p ${s}/tmp/old
-  mv ${s}/tmp/*.nt ${s}/tmp/old || true
-  for t in $TEMPLATES
-  do
-   csv="${s}/${t}.csv"
-   if [ -e $csv ]
-   then
-    echo "**** Using Template ${t} on ${csv} **************************************************************************"
-    mkdir -p ${s}/out
-    sed "s|{SUB}|${s}|g" ${t}.tarql.template > ${s}/tmp/${t}.tarql
-    tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.nt
-   else
-    echo "**** WARNING: ${csv} DOES NOT EXIST, SKIPPING TEMPLATE ${t} *******************************"
-   fi
-  done 
-  echo "** Merging ***********************************x************"
-  if [ -e ${s}/base.ttl ]
-  then
-   rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
-  fi
-  cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
-  rapper -i turtle -o ntriples ${s}/out/all.ttl >> /tmp/combined.nt
-  echo "** Testing ************************************************"
-  rapper -i turtle -c ${s}/out/all.ttl
-  echo "********************************************************************************************************"
+  map $s # no fork needed, tarql is parallized already
  fi
 done
 echo "********************* test combination ******************"
