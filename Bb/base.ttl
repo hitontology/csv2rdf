@@ -4,20 +4,20 @@
 @prefix hito: <http://hitontology.eu/ontology/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 
-hito:Bb rdfs:member hito:BbArchitectureApplicationSystemCatalogue, hito:BbArchitectureFeatureCatalogue, hito:BbArchitectureFunctionCatalogue;
+hito:Bb rdfs:member hito:BbApplicationSystemCatalogue, hito:BbFeatureCatalogue, hito:BbFunctionCatalogue;
         a hito:Classification;
 	dcterms:source <https://www.snik.eu/ontology/bb>;
 	rdfs:label "Blue Book classification"@en.
 
-hito:BbArchitectureApplicationSystemCatalogue a hito:ApplicationSystemCatalogue;
+hito:BbApplicationSystemCatalogue a hito:ApplicationSystemCatalogue;
 	rdfs:comment "Application System catalogue defined in chapter 6 'Architecture of Hospital Information Systems' in tables 6.1 to 6.14 in the Blue Book edition 2"@en;
         rdfs:label "Blue Book Architecture Application System Catalogue"@en.
 
-hito:BbArchitectureFeatureCatalogue a hito:FeatureCatalogue;
+hito:BbFeatureCatalogue a hito:FeatureCatalogue;
 	rdfs:comment "Feature catalogue defined in chapter 6 'Architecture of Hospital Information Systems' in tables 6.1 to 6.13 in the Blue Book edition 2"@en;
 	rdfs:label "Blue Book Architecture Feature Catalogue"@en.
 	
-hito:BbArchitectureFunctionCatalogue a hito:EnterpriseFunctionCatalogue;
+hito:BbFunctionCatalogue a hito:EnterpriseFunctionCatalogue;
 	rdfs:comment "Function catalogue defined in chapter 6 'Architecture of Hospital Information Systems' in tables 6.1 to 6.13 in the Blue Book edition 2"@en;
 	rdfs:label "Blue Book Architecture Function Catalogue"@en.
 
