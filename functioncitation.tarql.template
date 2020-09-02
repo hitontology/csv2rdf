@@ -4,17 +4,17 @@ PREFIX hito: <http://hitontology.eu/ontology/>
 
 CONSTRUCT
 {
-    ?f a hito:EnterpriseFunctionCitation;
+    ?citation a hito:EnterpriseFunctionCitation;
 	rdfs:comment ?co;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:enterpriseFunction ?f.
+    ?product hito:enterpriseFunction ?citation.
 }
 FROM <file:../functioncitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Func",?uri)) AS ?citation)
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
@@ -23,24 +23,24 @@ WHERE
 
 CONSTRUCT
 {
-    ?f hito:enterpriseFunctionClassified ?w.
+    ?citation hito:enterpriseFunctionClassified ?w.
 }
 FROM <file:../functioncitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Func",?uri)) AS ?citation)
    ?who apf:strSplit (?whodhiuri ";")
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?who)) AS ?w)
 }
 
 CONSTRUCT
 {
-    ?f hito:enterpriseFunctionClassified ?b.
+    ?citation hito:enterpriseFunctionClassified ?b.
 }
 FROM <file:../functioncitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Func",?uri)) AS ?citation)
    ?bb apf:strSplit (?bburi ";")
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?bb)) AS ?b)
 }

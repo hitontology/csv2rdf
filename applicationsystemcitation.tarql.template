@@ -14,7 +14,7 @@ CONSTRUCT
 FROM <file:../applicationsystemcitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?citation)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}App",?uri)) AS ?citation)
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
@@ -28,7 +28,7 @@ CONSTRUCT
 FROM <file:../applicationsystemcitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?citation)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}App",?uri)) AS ?citation)
    ?classified apf:strSplit (?classifieduri ";")
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?classified)) AS ?classi)
 }

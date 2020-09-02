@@ -4,19 +4,19 @@ PREFIX hito: <http://hitontology.eu/ontology/>
 
 CONSTRUCT
 {
-    ?f a hito:FeatureCitation;
+    ?citation a hito:FeatureCitation;
 	rdfs:comment ?co;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:feature ?f.
+    ?product hito:feature ?citation.
 
-    ?fc hito:supportedByFeatureCitation ?f.
+    ?fc hito:supportedByFeatureCitation ?citation.
 }
 FROM <file:../featurecitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Feat",?uri)) AS ?citation)
    BIND (IF(?functioncitation != '', URI(CONCAT(tarql:expandPrefix('hito'),?functioncitation)), ?nothing) AS ?fc)
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
@@ -26,12 +26,12 @@ WHERE
 
 CONSTRUCT
 {
-    ?f hito:featureClassified ?w.
+    ?citation hito:featureClassified ?w.
 }
 FROM <file:../featurecitation.csv>
 WHERE
 {
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Feat",?uri)) AS ?citation)
    ?who apf:strSplit (?whodhiuri ";")
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?who)) AS ?w)
 }
