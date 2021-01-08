@@ -1,0 +1,16 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix hito: <http://hitontology.eu/ontology/>.
+
+hito:EhrSfm a hito:Classification;
+	rdfs:label "HL7 Electronic Health Record System Functional Model"@en;
+	owl:versionInfo "2.1".
+	
+hito:EhrSfm2-1 rdfs:member hito:EhrSfmFeatureCatalogue.
+
+hito:EhrSfmFeatureCatalogue hito:FeatureCatalogue;
+	rdfs:label "EHR-S FM Feature Catalogue"@en;
+	rdfs:comment "HL7 Electronic Health Record System Functional Model Feature Catalogue"@en;
+	rdfs:seeAlso <http://www.hl7.org/implement/standards/product_brief.cfm?product_id=528>.
+
