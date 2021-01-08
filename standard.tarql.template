@@ -10,7 +10,7 @@ CONSTRUCT
 {
     ?s a hito:Interoperability;
 	rdfs:comment ?co;
-	hito:memberNr ?num;
+	hito:internalId ?num;
 	dcterms:source ?dbpediaUri;
 	rdfs:label ?len;
 	rdfs:label ?lde.

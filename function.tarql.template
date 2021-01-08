@@ -11,7 +11,7 @@ CONSTRUCT
     ?f a hito:EnterpriseFunctionClassified;
 	hito:enterpriseFunctionCatalogue ?cat;
 	rdfs:comment ?co;
-	hito:memberNr ?num;
+	hito:internalId ?num;
 	dcterms:source ?dcts;
 	rdfs:label ?len;
 	rdfs:label ?lde.

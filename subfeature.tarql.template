@@ -12,7 +12,7 @@ CONSTRUCT
 	hito:featureCatalogue ?cat;
 	rdfs:comment ?co;
 	skos:definition ?def;
-	hito:memberNr ?num;
+	hito:internalId ?num;
 	dcterms:source ?dcts;
 	rdfs:label ?len;
 	rdfs:label ?lde.

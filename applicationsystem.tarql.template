@@ -10,7 +10,7 @@ CONSTRUCT
     ?f a hito:ApplicationSystemClassified;
 	hito:applicationSystemCatalogue ?cat;
 	rdfs:comment ?co;
-	hito:memberNr ?num;
+	hito:internalId ?num;
 	dcterms:source ?dcts;
 	rdfs:label ?len;
 	rdfs:label ?lde.
