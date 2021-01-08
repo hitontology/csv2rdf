@@ -10,7 +10,9 @@ After a catalogue is converted to RDF, it gets added to the HITO ontology reposi
 The repository is the source of truth and changes to the SPARQL endpoint are not permanent.
 We are currently in the process of moving the source of truth for all software products and related attributes to a database, see https://github.com/hitontology/database.
 
+## Attributes
 
+You may describe software products both with an attribute.csv and a base.ttl file, though we recommend to use attribute.csv for all supported attributes and base.ttl for the rest. attribute.csv doesn't fit catalogues well, so we recommend just the base.ttl there.
 
 ## Requirements
 
