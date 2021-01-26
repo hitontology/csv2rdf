@@ -5,7 +5,8 @@
 
 hito:EhrSfm a hito:Classification;
 	rdfs:label "HL7 Electronic Health Record System Functional Model"@en;
-	owl:versionInfo "2.1".
+	owl:versionInfo "2.1";
+	rdfs:seeAlso <http://www.hl7.org/implement/standards/product_brief.cfm?product_id=528>.
 	
 hito:EhrSfm rdfs:member hito:EhrSfmFeatureCatalogue.
 
