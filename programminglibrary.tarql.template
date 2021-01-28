@@ -1,0 +1,15 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX hito: <http://hitontology.eu/ontology/>
+
+CONSTRUCT
+{
+    ?s a hito:ProgrammingLibrary;
+	rdfs:label ?len.
+}
+FROM <file:../programminglibrary.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?s)
+   BIND (STRLANG(?en,"en") AS ?len)
+}
+
