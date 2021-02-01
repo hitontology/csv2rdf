@@ -11,7 +11,7 @@ hito:EhrSfm a hito:Classification;
 hito:EhrSfm rdfs:member hito:EhrSfmFeatureCatalogue.
 
 hito:EhrSfmFeatureCatalogue a hito:FeatureCatalogue;
-	rdfs:label "EHR-S FM Feature Catalogue"@en;
+	rdfs:label "HL7 EHR-S FM Feature Catalogue"@en;
 	rdfs:comment "HL7 Electronic Health Record System Functional Model Feature Catalogue"@en;
 	rdfs:seeAlso <http://www.hl7.org/implement/standards/product_brief.cfm?product_id=528>.
 
