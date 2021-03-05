@@ -39,7 +39,7 @@ WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
    
-   BIND (IF(BOUND(?supertype)&&(?supertype="EnterpriseFunctionClassified"), hito:supports, hito:subFeatureOf) AS ?suprel)
+   BIND (IF(BOUND(?supertype)&&(?supertype="EnterpriseFunctionClassified"), hito:supportsFunctionClassified, hito:subFeatureOf) AS ?suprel)
    
    ?supe apf:strSplit (?super ";")
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?supe)) AS ?sup)
