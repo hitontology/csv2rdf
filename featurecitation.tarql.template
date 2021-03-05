@@ -17,7 +17,7 @@ FROM <file:../featurecitation.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Feat",?uri)) AS ?citation)
-   BIND (IF(?functioncitation != '', URI(CONCAT(tarql:expandPrefix('hito'),?functioncitation)), ?nothing) AS ?fc)
+   BIND (IF(?functioncitation != '', URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}Func",?functioncitation)), ?nothing) AS ?fc)
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
