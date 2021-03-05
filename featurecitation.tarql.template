@@ -11,7 +11,7 @@ CONSTRUCT
 
     ?product hito:feature ?citation.
 
-    ?fc hito:supportedByFeatureCitation ?citation.
+    ?citation hito:supportsFunction ?fc.
 }
 FROM <file:../featurecitation.csv>
 WHERE
