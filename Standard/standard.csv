@@ -1,6 +1,5 @@
 en,uri,comment,dctsource,dbpedia,paper,superstandard,comment
 Arden Syntax,Arden,Arden Syntax,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=2,http://dbpedia.org/resource/Arden_syntax,https://doi.org/10.1016/j.jbi.2012.02.001,http://dbpedia.org/resource/Health_Level_7,The Arden Syntax as a standardized language to represent medical knowledge can be used to express medical knowledge. Arden2ByteCode is a open source compiler for the Arden Syntax. Arden2ByteCode runs on Java Virtual Machines (JVM) and translates Arden Syntax directly to Java bytecode (JBC) executable on JVMs. It also serves as runtime environment for execution of the compiled bytecode.
-ARFF,ARFF,Aircraft rescue and firefighting,https://en.wikipedia.org/wiki/Aircraft_rescue_and_firefighting,http://dbpedia.org/resource/Aircraft_rescue_and_firefighting,,,
 ATC,ATC,Advanced Transportation Controller,https://www.ite.org/technical-resources/standards/atc-controller/,,,,
 CAM,CAM,Content Assembly Mechanism,https://en.wikipedia.org/wiki/Content_Assembly_Mechanism,,,,"XML Validation Framework and Canonical XML dictionary-based exchange assembly - OASIS CAM
 
