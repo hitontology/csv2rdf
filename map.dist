@@ -1,10 +1,8 @@
 #!/bin/bash
 set -e
 SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
-#SUBS="WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory"
 
 TEMPLATES="attribute standard subfeature feature function applicationsystem applicationsystemcitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
-#TEMPLATES="standard"
 
 function map
 {
