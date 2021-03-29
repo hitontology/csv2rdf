@@ -5,13 +5,16 @@ PREFIX hito: <http://hitontology.eu/ontology/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX bb: <http://www.snik.eu/ontology/bb/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 CONSTRUCT
 {
     ?s a hito:Interoperability;
 	rdfs:comment ?co;
 	hito:internalId ?num;
-	dcterms:source ?dbpediaUri;
+	owl:sameAs ?dbpediaUri;
+	rdfs:seeAlso ?p;
+	hito:subStandardOf ?super;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 }
@@ -24,6 +27,8 @@ WHERE
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FunctionCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
+   BIND (IF(BOUND(?paper)&&(?paper != ''), ?paper, ?nothing) AS ?p)
+   BIND (IF(BOUND(?superstandard)&&(?superstandard != ''), ?superstandard, ?nothing) AS ?super)
    #BIND (IF(BOUND(?dbpedia)&&(?dbpedia != ''), URI(tarql:expandPrefixedName(?dbpedia)), ?nothing) AS ?dbpediaUri)
    BIND(URI(?dbpedia) AS ?dbpediaUri)
 }
