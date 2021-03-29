@@ -1,0 +1,12 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix hito: <http://hitontology.eu/ontology/>.
+
+
+hito:JoshiPacsFeatureCatalogue a hito:FeatureCatalogue;
+	rdfs:comment "PACS Administrators’ and Radiologists’ Perspective on the Importance of Features for PACS Selection"@en;
+	rdfs:label "Joshi PACS"@en;
+	rdfs:seeAlso <https://pubmed.ncbi.nlm.nih.gov/24744278/>.
+
+
