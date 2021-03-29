@@ -27,8 +27,8 @@ WHERE
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FunctionCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
-   BIND (IF(BOUND(?paper)&&(?paper != ''), ?paper, ?nothing) AS ?p)
-   BIND (IF(BOUND(?superstandard)&&(?superstandard != ''), ?superstandard, ?nothing) AS ?super)
+   BIND (IF(BOUND(?paper)&&(?paper != ''), URI(?paper), ?nothing) AS ?p)
+   BIND (IF(BOUND(?superstandard)&&(?superstandard != ''), URI(?superstandard), ?nothing) AS ?super)
    #BIND (IF(BOUND(?dbpedia)&&(?dbpedia != ''), URI(tarql:expandPrefixedName(?dbpedia)), ?nothing) AS ?dbpediaUri)
    BIND(URI(?dbpedia) AS ?dbpediaUri)
 }
