@@ -1,5 +1,4 @@
 en,uri,comment,dctsource,dbpedia,paper,superstandard,comment
-Arden Syntax,Arden,Arden Syntax,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=2,http://dbpedia.org/resource/Arden_syntax,https://doi.org/10.1016/j.jbi.2012.02.001,http://dbpedia.org/resource/Health_Level_7,The Arden Syntax as a standardized language to represent medical knowledge can be used to express medical knowledge. Arden2ByteCode is a open source compiler for the Arden Syntax. Arden2ByteCode runs on Java Virtual Machines (JVM) and translates Arden Syntax directly to Java bytecode (JBC) executable on JVMs. It also serves as runtime environment for execution of the compiled bytecode.
 ATC,ATC,Advanced Transportation Controller,https://www.ite.org/technical-resources/standards/atc-controller/,,,,
 CAM,CAM,Content Assembly Mechanism,https://en.wikipedia.org/wiki/Content_Assembly_Mechanism,,,,"XML Validation Framework and Canonical XML dictionary-based exchange assembly - OASIS CAM
 
@@ -10,7 +9,6 @@ Included in the toolkit is an XML Editor/Validation/Schema Designer along with t
 The project implements the OASIS CAM standard & NIEM IEPD approach. The visual editor allows design of exchange structures using XML components dictionaries."
 CCA,CCA,Care Coordination Association Standard Handbook,http://www.cpaa.org.uk/care-standards-handbook.html,,,,
 CCAM,CCAM,Classification Commune des Actes Médicaux,https://en.wikipedia.org/wiki/Classification_Commune_des_Actes_Médicaux,,,,
-HL7 CCD,HL7_CCD,Health Level 7 Continuity of Care Document,https://en.wikipedia.org/wiki/Continuity_of_Care_Document,,,,"The Continuity of Care Document (CCD) specification is an XML-based markup standard intended to specify the encoding, structure, and semantics of a patient summary clinical document for exchange."
 CCR,CCR,ASTM E2369 - 12: Standard Specification for Continuity of Care Record (CCR),https://en.wikipedia.org/wiki/Continuity_of_Care_Record,,,,
 CDISC ODM,CDISC_ODM,Clinical Data Interchange Standards Consortium Operational Data Model,https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium,,,,
 CDISC LAB,CDISC_LAB,Clinical Data Interchange Standards Consortium Laboratory Data Model,https://www.cdisc.org/standards/data-exchange/lab,,,,
@@ -19,25 +17,28 @@ CGNS,CGNS,CGNS stands for CFD General Notation System,https://en.wikipedia.org/w
 CMS 3.0,CMS3_0,Centers for Medicare & Medicaid Services,https://www.cms.gov/Regulations-and-Guidance/Guidance/CMSRecordsSchedule/index,,,,
 Continua,Continua,Continua Design Guidelines,https://www.pchalliance.org/continua-design-guidelines,,,,
 CORBA,CORBA,Common Object Request Broker Architecture,https://www.omg.org/spec/CORBA/About-CORBA/,http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture,,,https://www.omg.org/spec/CCM/4.0/About-CCM.rdf (oder https://www.omg.org/spec/CCM ?)
-CTS2,CTS2,Common Terminology Services 2,https://www.omg.org/spec/CTS2/About-CTS2/;https://wiki.hl7.org/CTS2,,,,
 DICOM,DICOM,Digital Imaging and Communications in Medicine,https://www.dicomstandard.org/,http://dbpedia.org/resource/DICOM,,,
 EDI,EDI,Electronic data interchange,https://en.wikipedia.org/wiki/Electronic_data_interchange;https://docs.oracle.com/cd/E51433_01/fscm92pbr2/eng/fscm/sedi/task_EDIStandards-9f1203.html,http://dbpedia.org/resource/Electronic_data_interchange,,,
 GDF,GDF,Geographic Data Files (GDF),https://en.wikipedia.org/wiki/Geographic_Data_Files,http://dbpedia.org/resource/Geographic_Data_Files,,,
 GDT,GDT,Geometric dimensioning and tolerancing,https://en.wikipedia.org/wiki/Geometric_dimensioning_and_tolerancing,http://dbpedia.org/resource/Geometric_dimensioning_and_tolerancing,,,
 HIPAA,HIPAA,Health Insurance Portability and Accountability Act,https://www.hhs.gov/hipaa/index.html;https://www.hhs.gov/hipaa/for-professionals/privacy/index.html,http://dbpedia.org/resource/Health_Insurance_Portability_and_Accountability_Act,,,
 HL7,HL7,Health Level 7,http://www.hl7.org/,http://dbpedia.org/resource/Health_Level_7,,,
+HL7 Arden Syntax,HL7_Arden,Arden Syntax,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=2,http://dbpedia.org/resource/Arden_syntax,https://doi.org/10.1016/j.jbi.2012.02.001,HL7,The Arden Syntax as a standardized language to represent medical knowledge can be used to express medical knowledge. Arden2ByteCode is a open source compiler for the Arden Syntax. Arden2ByteCode runs on Java Virtual Machines (JVM) and translates Arden Syntax directly to Java bytecode (JBC) executable on JVMs. It also serves as runtime environment for execution of the compiled bytecode.
 HL7 V2.x,HL7_V2.x,Health Level 7 Version 2.x,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185,,,HL7,
 HL7 V3.0,HL7_V3.0,Health Level 7 Version 3.0,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186,,,HL7,
-HL7 CDA,CDA,HL7 Clinical Document Architecture,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7,,,,
-HL7 FHIR,HL7_FHIR,Health Level 7 Fast Healthcare Interoperability Resources Specification,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=343;https://www.hl7.org/fhir/overview.html,http://dbpedia.org/resource/Fast_Healthcare_Interoperability_Resources,,,
+HL7 CCD,HL7_CCD,Health Level 7 Continuity of Care Document,https://en.wikipedia.org/wiki/Continuity_of_Care_Document,,,HL7,"The Continuity of Care Document (CCD) specification is an XML-based markup standard intended to specify the encoding, structure, and semantics of a patient summary clinical document for exchange."
+HL7 CDA,CDA,HL7 Clinical Document Architecture,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=7,,,HL7,
+HL7 FHIR,HL7_FHIR,Health Level 7 Fast Healthcare Interoperability Resources Specification,https://www.hl7.org/implement/standards/product_brief.cfm?product_id=343;https://www.hl7.org/fhir/overview.html,http://dbpedia.org/resource/Fast_Healthcare_Interoperability_Resources,,HL7,
+HL7 CTS2,HL7_CTS2,Common Terminology Services 2,https://www.omg.org/spec/CTS2/About-CTS2/;https://wiki.hl7.org/CTS2,,,HL7,
 HPRIM,HPRIM,Harmoniser et PRomouvoir l'Informatique Médicale,http://www.interopsante.org/,,,,
 HPRIM-2.1,HPRIM2_1,Harmoniser et PRomouvoir l'Informatique Médicale Version 2.1,http://www.interopsante.org/,,,,
 HPRIM-XML,HPRIM-XML,Harmoniser et PRomouvoir l'Informatique Médicale XML,http://www.interopsante.org/,,,,
 HSCIC-ITK,HSCIC_ITK,Health and Social Care Information Centre Interoperability Toolkit,https://digital.nhs.uk/services/interoperability-toolkit,http://dbpedia.org/resource/HSCIC,,,
 HXP,HXP,Healthcare Xchange Protocol,http://hxp.sourceforge.net/,,,,
-ICD11,ICD11,International Classification of Diseases 11th Revision,https://icd.who.int/en,,,,
-ICD10,ICD10,International Statistical Classification of Diseases and Related Health Problems,https://www.who.int/classifications/icd/icdonlineversions/en/,http://dbpedia.org/resource/ICD-10,,,
-ICD9,ICD9,"International Classification of Diseases, Ninth Revision, Clinical Modification",https://en.wikipedia.org/wiki/List_of_ICD-9_codes;https://www.cdc.gov/nchs/icd/icd9cm.htm,http://dbpedia.org/resource/ICD-9,,,
+ICD,ICD,International Classification of Diseases,https://icd.who.int/en,,,,
+ICD11,ICD11,International Classification of Diseases 11th Revision,https://icd.who.int/en,,,ICD,
+ICD10,ICD10,International Statistical Classification of Diseases and Related Health Problems,https://www.who.int/classifications/icd/icdonlineversions/en/,http://dbpedia.org/resource/ICD-10,,ICD,
+ICD9,ICD9,"International Classification of Diseases, Ninth Revision, Clinical Modification",https://en.wikipedia.org/wiki/List_of_ICD-9_codes;https://www.cdc.gov/nchs/icd/icd9cm.htm,http://dbpedia.org/resource/ICD-9,,ICD,
 ICPC-2,ICPC2,"International Classification of Primary Care, Second edition",https://www.who.int/classifications/icd/adaptations/icpc2/en/,http://dbpedia.org/resource/ICPC-2,,,
 ICPM,ICPM,International Classification of Procedures in Medicine,https://en.wikipedia.org/wiki/International_Classification_of_Health_Interventions,http://dbpedia.org/resource/ICPM,,,
 IEPD,IEPD,Information Exchange Package Documentation (IEPD) and Justice Standards Clearinghouse,https://it.ojp.gov/NISS/,,,,
