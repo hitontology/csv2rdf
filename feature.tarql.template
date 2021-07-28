@@ -11,6 +11,7 @@ CONSTRUCT
     ?f a hito:FeatureClassified;
 	hito:featureCatalogue ?cat;
 	rdfs:comment ?co;
+	skos:definition ?def;
 	hito:internalId ?num;
 	dcterms:source ?dcts;
 	rdfs:label ?len;
@@ -21,6 +22,7 @@ WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
+   BIND (IF(?definition!= '', STRLANG(?definition,"en"), ?nothing) AS ?def)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}FeatureCatalogue")) AS ?cat)
