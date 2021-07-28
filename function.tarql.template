@@ -39,3 +39,15 @@ WHERE
    ?dce apf:strSplit (?dcesource ";")
 }
 
+CONSTRUCT
+{
+    ?f hito:subFunctionOf ?sup.
+}
+FROM <file:../function.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   ?supe apf:strSplit (?superfunction ";")
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?supe)) AS ?sup)
+}
+
