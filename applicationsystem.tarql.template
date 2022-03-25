@@ -10,6 +10,8 @@ CONSTRUCT
     ?f a hito:ApplicationSystemClassified;
 	hito:applicationSystemCatalogue ?cat;
 	rdfs:comment ?co;
+	skos:definition ?def;
+	skos:definition ?def_de;
 	hito:internalId ?num;
 	dcterms:source ?dcts;
 	rdfs:label ?len;
@@ -20,6 +22,8 @@ WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
    BIND (IF(?comment != '', STRLANG(?comment,"en"), ?nothing) AS ?co)
+   BIND (IF(?definition!= '', STRLANG(?definition,"en"), ?nothing) AS ?def)
+   BIND (IF(?definition_de!= '', STRLANG(?definition_de,"en"), ?nothing) AS ?def_de)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}ApplicationSystemCatalogue")) AS ?cat)
@@ -37,6 +41,18 @@ WHERE
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
    ?synonym apf:strSplit (?synonyms ";")
    BIND (STRLANG(?synonym,"en") AS ?synonymen)
+}
+
+CONSTRUCT
+{
+    ?f skos:altLabel ?synonymde.
+}
+FROM <file:../applicationsystem.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   ?synonym apf:strSplit (?synonyms_de ";")
+   BIND (STRLANG(?synonym,"de") AS ?synonymde)
 }
 
 CONSTRUCT
