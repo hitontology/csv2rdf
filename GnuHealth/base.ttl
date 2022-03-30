@@ -1,12 +1,12 @@
 @prefix : <http://hitontology.eu/ontology/> .
 
 :GnuHealth
-	:directFeature
+	:spOffersFCla
 		:ListHealthWorkforceCadresAndRelatedIdentificationInformation,
 		:MonitorPerformanceOfHealthcareProviders,
 		:ManageCertificationregistrationOfHealthcareProviders,
 		:PublicHealthEventNotification;
-	:directEnterpriseFunction
+	:spSupportsEfCla
 		:PrescriptionAndMedicationManagement,
 		:ClientHealthRecords.
 

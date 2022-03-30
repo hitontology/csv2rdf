@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory EhrSfm"
+SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory EhrSfm Mb"
 
-TEMPLATES="attribute standard subfeature feature function applicationsystem applicationsystemcitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
+TEMPLATES="attribute standard subfeature feature function applicationsystemtype applicationsystemtypecitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
 
 function map
 {

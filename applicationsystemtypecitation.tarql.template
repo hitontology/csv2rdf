@@ -4,12 +4,12 @@ PREFIX hito: <http://hitontology.eu/ontology/>
 
 CONSTRUCT
 {
-    ?citation a hito:ApplicationSystemCitation;
+    ?citation a hito:ApplicationSystemTypeCitation;
 	rdfs:comment ?co;
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:applicationSystem ?citation.
+    ?product hito:spIsOfAstCit ?citation.
 }
 FROM <file:../applicationsystemcitation.csv>
 WHERE
@@ -23,7 +23,7 @@ WHERE
 
 CONSTRUCT
 {
-    ?citation hito:applicationSystemClassified ?classi.
+    ?citation hito:astCitClassifiedAs ?classi.
 }
 FROM <file:../applicationsystemcitation.csv>
 WHERE

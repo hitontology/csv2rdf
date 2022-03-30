@@ -7,8 +7,8 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
 CONSTRUCT
 {
-    ?f a hito:ApplicationSystemClassified;
-	hito:applicationSystemCatalogue ?cat;
+    ?f a hito:ApplicationSystemTypeClassified;
+	hito:astClaFrom ?cat;
 	rdfs:comment ?co;
 	skos:definition ?def;
 	skos:definition ?def_de;
@@ -26,7 +26,7 @@ WHERE
    BIND (IF(?definition_de!= '', STRLANG(?definition_de,"en"), ?nothing) AS ?def_de)
    BIND (IF(?en != '', STRLANG(?en,"en"), ?nothing) AS ?len)
    BIND (IF(?de != '', STRLANG(?de,"de"), ?nothing) AS ?lde)
-   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}ApplicationSystemCatalogue")) AS ?cat)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),"{SUB}ApplicationSystemTypeCatalogue")) AS ?cat)
    BIND (IF(BOUND(?n)&&(?n != ''), ?n, ?nothing) AS ?num)
    BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dcts)
 }

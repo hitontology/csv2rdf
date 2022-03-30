@@ -3,21 +3,21 @@
 @prefix dbr: <http://dbpedia.org/resource/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 
-:Bahmni	:organizationalUnit :BahmniEmergency, :BahmniSurgery, :BahmniIntakeOutput, :BahmniGynaecology;
+:Bahmni	:spUsedInOuCit :BahmniEmergency, :BahmniSurgery, :BahmniIntakeOutput, :BahmniGynaecology;
         dcterms:source <https://www.medfloss.org/node/1103> .
 
 :BahmniEmergency a :OrganizationalUnitCitation;
 	rdfs:label "emergency"@en;
-	:organizationalUnitClassified :SnomedAccidentAndEmergencyDepartmentEnvironment.
+	:ouCitClassifiedAs :SnomedAccidentAndEmergencyDepartmentEnvironment.
 
 :BahmniSurgery a :OrganizationalUnitCitation;
 	rdfs:label "surgery"@en;
-	:organizationalUnitClassified :SnomedSurgicalDepartmentEnvironment.
+	:ouCitClassifiedAs :SnomedSurgicalDepartmentEnvironment.
 
 :BahmniIntakeOutput a :OrganizationalUnitCitation;
 	rdfs:label "intake-output"@en.
 
 :BahmniGynaecology a :OrganizationalUnitCitation;
 	rdfs:label "gynaecology"@en;
-	:organizationalUnitClassified :SnomedGynecologyDepartmentEnvironment.
+	:ouCitClassifiedAs :SnomedGynecologyDepartmentEnvironment.
 

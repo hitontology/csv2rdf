@@ -9,7 +9,7 @@ CONSTRUCT
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:organizationalUnit ?citation.
+    ?product hito:spUsedInOuCit ?citation.
 }
 FROM <file:../organizationalunitcitation.csv>
 WHERE
@@ -23,7 +23,7 @@ WHERE
 
 CONSTRUCT
 {
-    ?citation hito:organizationalUnitClassified ?classi.
+    ?citation hito:ouCitClassifiedAs ?classi.
 }
 FROM <file:../organizationalunitcitation.csv>
 WHERE

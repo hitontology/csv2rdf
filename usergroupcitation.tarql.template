@@ -9,7 +9,7 @@ CONSTRUCT
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:userGroup ?citation.
+    ?product hito:spUsedByUserCit ?citation.
 }
 FROM <file:../usergroupcitation.csv>
 WHERE
@@ -23,7 +23,7 @@ WHERE
 
 CONSTRUCT
 {
-    ?citation hito:userGroupClassified ?classi.
+    ?citation hito:userCitClassifiedAs ?classi.
 }
 FROM <file:../usergroupcitation.csv>
 WHERE

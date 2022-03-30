@@ -1,8 +1,8 @@
 @prefix : <http://hitontology.eu/ontology/> .
 
 :Orthanc
-	:directFeature :CaptureFromDigitalDevices;
-	:directEnterpriseFunction
+	:spOffersFCla :CaptureFromDigitalDevices;
+	:spSupportsEfCla
 		:BbResearchAndEducation,
 		:BbExecutionOfDiagnosticTherapeuticAndNursingProcedures,
 		:WhoDhiLaboratoryAndDiagnosticsImagingManagement.

@@ -9,7 +9,7 @@ PREFIX bb: <http://www.snik.eu/ontology/bb/>
 CONSTRUCT
 {
     ?f a hito:EnterpriseFunctionClassified;
-	hito:enterpriseFunctionCatalogue ?cat;
+	hito:efClaFrom ?cat;
 	rdfs:comment ?co;
 	hito:internalId ?num;
 	dcterms:source ?dcts;

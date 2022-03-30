@@ -9,7 +9,7 @@ CONSTRUCT
 	rdfs:label ?len;
 	rdfs:label ?lde.
 
-    ?product hito:feature ?citation.
+    ?product hito:spOffersFCit ?citation.
 
     ?citation hito:supportsFunction ?fc.
 }
@@ -26,7 +26,7 @@ WHERE
 
 CONSTRUCT
 {
-    ?citation hito:featureClassified ?w.
+    ?citation hito:fCitClassifiedAs ?w.
 }
 FROM <file:../featurecitation.csv>
 WHERE
