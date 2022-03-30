@@ -6,6 +6,6 @@
 hito:WhoDhi1-0 rdfs:member hito:WhoDhiSystemCategoryApplicationSystemCatalogue.
 
 hito:WhoDhiSystemCategoryApplicationSystemCatalogue a hito:ApplicationSystemCatalogue;
-	rdfs:comment "Section 'System Categories' describing Application Systems in the WHO Classification of Digital Health Interventions v1.0"@en;
+	rdfs:comment "Section 'System Categories' describing Application System Types in the WHO Classification of Digital Health Interventions v1.0"@en;
 	rdfs:label "System Categories"@en;
 	rdfs:seeAlso <https://www.who.int/reproductivehealth/publications/mhealth/WHO_Classifications_Poster.pdf>, <https://apps.who.int/iris/bitstream/handle/10665/260480/WHO-RHR-18.06-eng.pdf>.
