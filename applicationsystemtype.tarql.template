@@ -17,7 +17,7 @@ CONSTRUCT
 	rdfs:label ?len;
 	rdfs:label ?lde.
 }
-FROM <file:../applicationsystem.csv>
+FROM <file:../applicationsystemtype.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
@@ -35,7 +35,7 @@ CONSTRUCT
 {
     ?f skos:altLabel ?synonymen.
 }
-FROM <file:../applicationsystem.csv>
+FROM <file:../applicationsystemtype.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
@@ -47,7 +47,7 @@ CONSTRUCT
 {
     ?f skos:altLabel ?synonymde.
 }
-FROM <file:../applicationsystem.csv>
+FROM <file:../applicationsystemtype.csv>
 WHERE
 {
    BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
