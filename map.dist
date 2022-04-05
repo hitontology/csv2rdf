@@ -1,38 +1,55 @@
 #!/bin/bash
 set -e
 SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory EhrSfm Mb"
-
 TEMPLATES="attribute standard subfeature feature function applicationsystemtype applicationsystemtypecitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
+
+RED='\033[0;31m'
+ORANGE='\033[0;33m'
+LIGHTGREEN='\033[1;32m'
+GRAY='\033[0;37m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+NC='\033[0m'
 
 function map
 {
- echo "** DIRECTORY ${s} ******************************************************************************"
+ echo -e "* ${BLUE}DIRECTORY ${s}${NC}" 
  mkdir -p ${s}/tmp
  mkdir -p ${s}/tmp/old
  mv ${s}/tmp/*.nt ${s}/tmp/old || true
+ found=0
  for t in $TEMPLATES
  do
   csv="${s}/${t}.csv"
   if [ -e $csv ]
   then
-   echo "**** Using Template ${t} on ${csv} **************************************************************************"
+   echo -e -n "** ${LIGHTGREEN}Using Template ${t} on ${csv} ${NC}..."
+   ((found=found+1))
    mkdir -p ${s}/out
    sed "s|{SUB}|${s}|g" ${t}.tarql.template > ${s}/tmp/${t}.tarql
-   tarql ${s}/tmp/${t}.tarql | rapper -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.nt
-  else
-   echo "**** WARNING: ${csv} DOES NOT EXIST, SKIPPING TEMPLATE ${t} *******************************"
+   tarql ${s}/tmp/${t}.tarql | rapper -q -i turtle - http://hitontology.eu/ontology/ > ${s}/tmp/${t}.nt
+   echo -e " ${LIGHTGREEN}`wc -l < ${s}/tmp/${t}.nt` triples${NC}"
+  #else
+   #echo -e "${GRAY}**** ${csv} DOES NOT EXIST, SKIPPING TEMPLATE ${t} *******************************${NC}"
   fi
  done 
- echo "** Merging ***********************************x************"
+ if [ $found -eq "0" ]
+ then
+  echo -e "** ${RED}ERROR: DIRECTORY ${s} DOES NOT MATCH ANY TEMPLATE, SKIPPING ${s} ${NC}"
+  return
+ fi
+ echo -e -n "** ${LIGHTGREEN}Merging${NC}... "
  if [ -e ${s}/base.ttl ]
  then
-  rapper -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
+  echo -e -n "$LIGHTGREEN adding base${NC}: "
+  rapper -q -i turtle ${s}/base.ttl > ${s}/tmp/base.nt 
+  echo -e -n "$LIGHTGREEN `wc -l < ${s}/tmp/base.nt` triples${NC}. "
  fi
- cat prefix.ttl ${s}/tmp/*.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
- rapper -i turtle -o ntriples ${s}/out/all.ttl >> /tmp/combined.nt
- echo "** Testing ************************************************"
- rapper -i turtle -c ${s}/out/all.ttl
- echo "********************************************************************************************************"
+ cat prefix.ttl ${s}/tmp/*.nt | rapper -q -i turtle -o turtle - http://hitontology.eu/ontology/ > ${s}/out/all.ttl
+ rapper -q -i turtle -o ntriples ${s}/out/all.ttl >> /tmp/combined.nt
+ echo -e -n "${LIGHTGREEN}Testing${NC}... "
+ rapper -q -i turtle -c ${s}/out/all.ttl
+ echo -e "${LIGHTGREEN}`wc -l < ${s}/out/all.ttl` triples in ${s}/out/all.ttl, `wc -l < /tmp/combined.nt` total${NC}"
 }
 
 rm -f /tmp/combined.nt
@@ -40,13 +57,13 @@ for s in $SUBS
 do
  if [ ! -d "${s}" ]
  then
-  echo "** ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ********************************"
+  echo -e "** ${RED}ERROR: DIRECTORY ${s} DOES NOT EXIST, SKIPPING ${s} ${NC}"
  else
   map $s # no fork needed, tarql is parallized already
  fi
 done
-echo "********************* test combination ******************"
+echo -e -n "${LIGHTGREEN}sorting and converting to Turtle format${NC}... "
 sort /tmp/combined.nt -o /tmp/combined.nt
-rapper -i turtle -c /tmp/combined.nt
-cat prefix.ttl /tmp/combined.nt | rapper -i turtle -o turtle - http://hitontology.eu/ontology/ > /tmp/combined.ttl
-echo "/tmp/combined.ttl"
+rapper -q -i turtle -c /tmp/combined.nt
+cat prefix.ttl /tmp/combined.nt | rapper -q -i turtle -o turtle - http://hitontology.eu/ontology/ > /tmp/combined.ttl
+echo -e "${LIGHTGREEN}`wc -l < /tmp/combined.nt` triples in /tmp/combined.ttl${NC}"
