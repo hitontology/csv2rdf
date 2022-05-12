@@ -1,0 +1,14 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX hito: <http://hitontology.eu/ontology/>
+
+CONSTRUCT
+{
+    ?s ?r ?t.
+}
+FROM <file:../link.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?source)) AS ?s)
+   BIND (URI(CONCAT(tarql:expandPrefix('skos'),?rel)) AS ?r)
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?target)) AS ?t)
+}

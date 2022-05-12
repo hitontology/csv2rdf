@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory EhrSfm Mb"
-TEMPLATES="attribute standard subfeature feature function applicationsystemtype applicationsystemtypecitation featurecitation functioncitation organizationalunitcitation usergroupcitation"
+SUBS="Bahmni Bb GnuHealth Orthanc Standard WhoDhiClient WhoDhiDataService WhoDhiHealthcareProvider WhoDhiHealthSystemManager WhoDhiSystemCategory EhrSfm Mb Link"
+TEMPLATES="attribute standard subfeature feature function applicationsystemtype applicationsystemtypecitation featurecitation functioncitation organizationalunitcitation usergroupcitation link"
 
 RED='\033[0;31m'
 ORANGE='\033[0;33m'
