@@ -30,3 +30,30 @@ WHERE
    BIND (IF(BOUND(?dctsource)&&(?dctsource != ''), URI(tarql:expandPrefixedName(?dctsource)), ?nothing) AS ?dcts)
 }
 
+CONSTRUCT
+{
+    ?f ?suprel ?sup.
+}
+FROM <file:../feature.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+   
+   BIND (IF(BOUND(?supertype)&&(?supertype="EnterpriseFunctionClassified"), hito:supportsFunctionClassified, hito:subFeatureOf) AS ?suprel)
+   
+   ?supe apf:strSplit (?super ";")
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?supe)) AS ?sup)
+}
+
+CONSTRUCT
+{
+    ?f skos:altLabel ?synonymen.
+}
+FROM <file:../feature.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('hito'),?uri)) AS ?f)
+
+   ?synonym apf:strSplit (?synonyms ";")
+   BIND (STRLANG(?synonym,"en") AS ?synonymen)
+}
