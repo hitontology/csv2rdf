@@ -1,4 +1,5 @@
 from urllib import request
+import subprocess
 
 RESET = "\033[1;0m"
 GREEN = "\033[1;32m"
@@ -28,3 +29,16 @@ for file in sheets:
     url = csvUrl(s["key"],s["gid"])
     print("Downloading", GREEN, file, RESET, "from", GREEN, url, RESET + "...")
     request.urlretrieve(url, file)
+
+print(GREEN,"Downloads finished",RESET)
+
+# end of line conversion from CRLF to LF (\n) to match repository and not cause unnecessary diffs
+try:
+    subprocess.run("dos2unix */*.csv", shell=True)
+except FileNotFoundError:
+    print("dos2unix command not found. Skipping end of line conversion.")
+
+try:
+    subprocess.run(["git", "status"])
+except FileNotFoundError:
+    pass
